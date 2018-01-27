@@ -1,43 +1,81 @@
-ROUTINE buildaviation
- //buildaviation
+ROUTINE buildsampleaviation
+  // This is buildsampleaviation from https://github.com/intersystems/Samples-Aviation
  // Use or operation of this code is subject to acceptance of the license available in the code repository for this code.
+
+    write !, "This is the setup routine for the Samples-Aviation sample, which is meant for "
+    write !, "use with the InterSystems IRIS Text Analytics capabilities. To use this sample,"
+    write !, "you must have an InterSystems IRIS license that includes analytics capabilities."
+
+    write !, "Please specify the directory that contains this sample."
+    write !, "(This is the directory that contains the README.md and LICENSE files.)", !
+    read stagingroot
+    set OK=$$run(stagingroot,1)
+    
+    if OK {
+        write !!, "IMPORTANT: See the README.md file for information on the next setup steps, "
+        write !, "which are manual but simple. Then see the README.md file for details on this "
+        write !, "sample and links to related documentation."
+        write !!, "IMPORTANT: If there were build errors while setting up this sample, your "
+        write !, "license may not include analytics capabilities."
+    }
+
+
+run(stagingroot, interactive) public {
+    if '$DATA(interactive) {
+        set interactive=0
+    }
+
+    if $ZSTRIP(stagingroot,"<>W")="" {
+        if interactive {
+            write !, "Not a valid directory... Quitting."
+        }
+        return 0
+    }
+
+    //load and compile classes ***************************
+    if interactive {
+        write !!, "Loading and compiling classes..."
+    }
+    set dir=stagingroot_"/cls/"
+    if '##class(%File).DirectoryExists(dir) {
+        if interactive {
+            write !!, "Looking for "_dir
+            write !, "but it does not exist... Quitting."
+        }
+        return 0
+    }
+    do $system.OBJ.LoadDir(dir,"ck",,1)
+
+    //load data from exported global ******************************
+    if interactive {
+        write !, "Loading data..."
+    }
+    set file=stagingroot_"/gbl/Aviation.xml"
+    if '##class(%File).Exists(file) {
+        if interactive {
+            write !!, "Looking for "_file
+            write !, "but it does not exist... Quitting."
+        }
+        return 0
+    }
+    do $system.OBJ.Load(file)
  
-    write !, "This is the setup routine for the Aviation sample, which enables you"
-    write !, "to explore unstructured data and InterSystems IRIS text analytics."
-    write !
+    // execute the setup code in the loaded classes *********************
+    if '##class(%Dictionary.CompiledClass).%ExistsId("Aviation.Utils") {
+        if interactive {
+            write !!, "Looking for the class Aviation.Utils"
+            write !, "but it does not exist... Quitting."
+        }
+        return 0
+    }
 
-	write !, "Please specify the directory that contains the Aviation sample."
-	write !, "(This is the directory that contains the /buildsample, /cls, and gbl subdirectories.)", !
-	read stagingroot
-	
-	if $ZSTRIP(stagingroot,"<>W")="" {
-		write !, "Not a valid directory... Quitting."
-		quit
-	}
-	if '##class(%File).Exists(stagingroot) {
-		write !, "Not a valid directory... Quitting."
-		quit
-	}
-	 	
- 	write !, "Loading and compiling classes..."
- 	set dir=stagingroot_"/cls/"
- 	do $system.OBJ.LoadDir(dir,"ck",,1)
- 	
- 	write !, "Loading data..."
- 	set file=stagingroot_"/gbl/Aviation.xml"
- 	do $system.OBJ.Load(file)
- 	
- 	write !, "Running the Aviation.Utils::Setup() method..."
- 	do ##class(Aviation.Utils).Setup()
- 	
- 	write !, "The next steps are manual:"
- 	write !, "1. Create a web application that uses this namespace."
-        write !, "   (In the Management Portal, click System Administration >"
-        write !, "   Security > Applications > Web Applications....)"
- 	write !, "2. Enable that web application for use with Analytics."
-        write !, "   (When you define the web application, select both"
-        write !, "   DeepSee and iKnow check boxes)."
- 	write !, "See the documentation for more information."
+    if interactive {
+        write !, "Running the Aviation.Utils::Setup() method..."
+    }
+    do ##class(Aviation.Utils).Setup()
+    return 1
 
- 	
 
+} 
+ 
+ 
