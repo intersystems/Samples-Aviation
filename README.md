@@ -5,8 +5,8 @@ The end of the file has setup instructions.
 Use or operation of this code is subject to acceptance of the license available in the code 
 repository for this code.
 ************************************************************************************
-SAMPLES-AVIATION provides sample data for use in exploring InterSystems IRIS Text Analytics capabilities. This data provides a combination of structured and unstructured 
-meant solely for use in exploring InterSystems IRIS capabilities.
+SAMPLES-AVIATION provides sample data for use in exploring InterSystems IRIS Text Analytics capabilities. 
+In order to use this sample, you must have an InterSystems IRIS license that includes these capabilities.
 
 After setup, the data is available for use in various ways:
 * For use in InterSystems IRIS Natural Language Processing. See 
@@ -50,7 +50,7 @@ Repo items for use with InterSystems IRIS Natural Language Processing (NLP)
   NLP queries and visualize the results.
 
 ************************************************************************************
-Repo items for use with Text Analytics options in InterSystems IRIS Business Intelligence (BI).
+Repo items for use with Text Analytics options in InterSystems IRIS Business Intelligence (BI)
 ************************************************************************************
 * The Cubes package contains BI cube definitions that use Text Analytics features
   and that use the data in this repo. See 
@@ -66,19 +66,30 @@ Setup instructions
 ************************************************************************************
 1. Download the repo to your local disk.
 2. Open the InterSystems IRIS Terminal.
-3. Enter the following command, where my-namespace is the namespace where you want to load the sample:
-   ZN "my-namespace"
-4. Enter the following commands (replacing with the full path of the       buildsample/buildsampleaviation.rtn file):
+3. Enter the following command (replacing with the namespace where you want to load the sample):
+   ZN "mynamespace"
+4. Enter the following commands (replacing with the full path of the file buildsample/buildsampleaviation.rtn):
    do $system.OBJ.Load("full-path-to-buildsampleaviation.rtn","ck")
    do ^buildsampleaviation
-   These steps load & start a routine that will load the rest of the sample and 
-   its data and compile all the code in the sample.
-5. Then answer the prompts.
-6. Create a web application for use in this namespace and enable that web app for use with analytics. Here's how: 
-   <p>a. In the Management Portal, select System Administration > Security > Applications > Web Applications.<p>
-   <p>b. Click Create New Web Application.<p>
-   <p>c. For name, type csp/namespace where namespace is the specific namespace you're using.<p> 
-   <p>d. For Namespace, select the same namespace.<p> 
-   <p>e. Check the DeepSee and iKnow check boxes.<p> 
-   <p>f. Accept all other defaults.<p> 
-   <p>g. Click Save.<p>
+5. Then answer any prompts.
+6. After the routine has finished running, create a web application for use in this namespace and 
+   enable that web app for use with analytics. Here's how:
+
+   a. In the Management Portal, select System Administration > Security > Applications > Web Applications. 
+
+   b. Click Create New Web Application. 
+
+   c. For name, type csp/namespace where namespace is the specific namespace you're using. 
+   d. For Namespace, select the same namespace. 
+
+   e. Check the DeepSee and iKnow check boxes. 
+
+   f. Accept all other defaults. 
+
+   g. Click Save.
+
+   If you have already defined a web application for use in this namespace, check the definiton of that web
+   application and ensure that both DeepSee and iKnow check boxes are selected.
+
+After step 6, when you access the Analytics submenu of the Management Portal, this namespace will be listed.
+For example, you can now use the Analyzer with the cubes that are included within this sample.
