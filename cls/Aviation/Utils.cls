@@ -3,17 +3,15 @@ Include %IKPublic
 /// Use or operation of this code is subject to acceptance of the license available in the code repository for this code.
 /// <p>This class groups code for setting up two demos:</p>
 /// <ul>
-/// 	<li>The <b>DeepSee Aviation demo</b> demonstrates how the iKnow featues embedded in
+/// 	<li>The <b>BI Aviation demo</b> demonstrates how the iKnow featues embedded in
 /// 		DeepSee can be used to combine analysis of structured and unstructured data. It can be
-/// 		configured by calling the <method>SetupCube</method> class method in this class. Check
-/// 		the "Using unstructured data in cubes" chapter in the "Defining DeepSee models" guide.</li>
-/// 	<li>The <b>iKnow Aviation demo</b> uses the same dataset, but just loads it as a normal
+/// 		configured by calling the <method>SetupCube</method> class method in this class. </li>
+/// 	<li>The <b>Tex Analytics Aviation demo</b> uses the same dataset, but just loads it as a normal
 /// 		standalone iKnow domain, which can be explored to the general iKnow APIs. This domain is
-/// 			fully defined through the domain definition in <class>Aviation.ReportDomain</class> and can
+/// 		fully defined through the domain definition in <class>Aviation.ReportDomain</class> and can
 /// 		be set up by calling its %Build() method. This class' <method>SetupStandalone</method>
-/// 			will invoke that %Build() method and call additional configuration code to ensure your
-/// 			security settings allow accessing the UI classes for the SAMPLES namespace. Check the 
-/// 		"Using iKnow" guide in the documentation for more details.</p>
+/// 		will invoke that %Build() method and call additional configuration code to ensure your
+/// 		security settings allow accessing the UI classes.</p>
 /// </ul>
 /// 
 ///  <p>The classes in this package represent events involving aircraft as registered by the 
@@ -127,9 +125,6 @@ ClassMethod SetupStandalone(pDomainName As %String = "", pMetaFields As %String 
 	quit tSC
 }
 
-/// Note that this step is only required for licensing reasons, as the outcome of the compile-time
-/// actions taken by an iKnow domain definition could not be packaged in the distributed SAMPLES 
-/// database before knowing the license used by the actual Cache instance.
 /// DO NOT MODIFY OR USE THIS CODE OUTSIDE OF ITS INVOCATION BY SetupStandalone()
 ClassMethod EnableDomainDefinition() As %Status [ Internal ]
 {
