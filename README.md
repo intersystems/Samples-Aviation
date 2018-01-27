@@ -28,8 +28,7 @@ Repo items related to the data
 * Upon setup (see end), data is loaded from the gbl/Aviation.xml file into these
   classes.
 
-* The Aviation.DataUtils and Aviation.Utils are helper classes used by the repo
-  setup routine (see end).
+* The Aviation.Utils class is a helper classes used by the repo setup routine (see end).
 
 ************************************************************************************
 Repo items for use with InterSystems IRIS Natural Language Processing (NLP) 
