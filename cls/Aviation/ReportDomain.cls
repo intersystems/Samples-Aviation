@@ -3,12 +3,9 @@
 /// Check the documentation on "Domain Definitions" or the class reference of
 /// <class>%iKnow.DomainDefinition</class> for more details.</p>
 /// <p>Note: for licensing reasons, this domain is disabled by default. To enable it, open this class 
-/// in Studio, change the "disabled" property in the root &lt;domain&gt; element of the
+/// in any IDE, change the "disabled" property in the root &lt;domain&gt; element of the
 /// <xdata>Domain</xdata> XData block to "false" and compile the class. Alternatively, run the 
-/// SetupStandalone() method in <class>Aviation.Utils</class>.<br/>This step
-/// is only required for licensing reasons, as the outcome of the compile-time actions taken by an
-/// iKnow domain definition could not be packaged in the distributed SAMPLES database before knowing
-/// the license context at the actual Cache instance where it will be installed.</p>
+/// SetupStandalone() method in <class>Aviation.Utils</class>.
 /// <p><b>Note on the data</b>: The dataset provided in this sample demo is only a lightweight
 /// subset of the full NTSB dataset, which is available from 
 /// <a href="http://www.ntsb.gov/" target="_blank">http://www.ntsb.gov</a>. This data is supplied
