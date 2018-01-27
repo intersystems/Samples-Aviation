@@ -69,7 +69,9 @@ Setup instructions
 3. Enter the following command (replacing with the namespace where you want to load the sample):
    ZN "mynamespace"
 4. Enter the following commands (replacing with the full path of the file buildsample/buildsampleaviation.rtn):
+
    do $system.OBJ.Load("full-path-to-buildsampleaviation.rtn","ck")
+
    do ^buildsampleaviation
 5. Then answer any prompts.
 6. After the routine has finished running, create a web application for use in this namespace and 
