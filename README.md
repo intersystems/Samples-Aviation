@@ -82,7 +82,8 @@ Setup instructions
 
    b. Click Create New Web Application. 
 
-   c. For name, type csp/namespace where namespace is the specific namespace you're using. 
+   c. For name, type csp/mynamespace where namespace is the specific namespace you're using. 
+
    d. For Namespace, select the same namespace. 
 
    e. Check the DeepSee and iKnow check boxes. 
