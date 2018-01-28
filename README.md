@@ -57,7 +57,7 @@ Repo items for use with Text Analytics options in InterSystems IRIS Business Int
   and that use the data in this repo. See 
   http://docs.intersystems.com/irislatest?KEY=D2MODADV_ch_iknow for details.
 * KPI.TopConcepts contains a BI KPI that uses a Text Analytics query.
-* KPI.Actions defines a KPI action (which is used on a dashboard also in this repo).
+* KPI.Actions defines a KPI action (which is used on a dashboard also in this sample).
 * Aviation.DashboardsEtc defines Business Intelligence pivot tables and dashboards
   that display the data in this repo and that provide you the ability of performing
   simple analyses of that dat.
