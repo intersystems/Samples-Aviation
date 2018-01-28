@@ -65,7 +65,7 @@ Repo items for use with Text Analytics options in InterSystems IRIS Business Int
 ************************************************************************************
 Setup instructions
 ************************************************************************************
-1. Download the repo to your local disk.
+1. Download the repo to your local disk and uncompress it.
 2. Open the InterSystems IRIS Terminal.
 3. Enter the following command (replacing with the namespace where you want to load the sample):
 
