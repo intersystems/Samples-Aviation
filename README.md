@@ -68,6 +68,7 @@ Setup instructions
 1. Download the repo to your local disk.
 2. Open the InterSystems IRIS Terminal.
 3. Enter the following command (replacing with the namespace where you want to load the sample):
+
    ZN "mynamespace"
 4. Enter the following commands (replacing with the full path of the file buildsample/buildsampleaviation.rtn):
 
