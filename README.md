@@ -11,11 +11,13 @@ In order to use this sample, you must have an InterSystems IRIS license that inc
 After setup, the data is available for use in various ways:
 * For use in InterSystems IRIS Natural Language Processing. See 
   http://docs.intersystems.com/irislatest?KEY=GIKNOW 
+  
   The repo also contains specific samples related to NLP.
 * For use with InterSystems IRIS SQL Search. See 
   http://docs.intersystems.com/irislatest?KEY=GSQLSRCH
 * For use with Text Analytics options in InterSystems IRIS Business Intelligence.
   See http://docs.intersystems.com/irislatest?KEY=D2MODADV_ch_iknow
+  
   The repo also contains specific samples related to these options.
 
 ************************************************************************************
