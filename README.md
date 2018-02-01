@@ -97,4 +97,6 @@ Setup instructions
    application and ensure that both DeepSee and iKnow check boxes are selected.
 
 After step 6, when you access the Analytics submenu of the Management Portal, this namespace will be listed.
-For example, you can now use the Analyzer with the cubes that are included within this sample.
+For example, you can now use the Analyzer with the cubes that are included within this sample. 
+
+IMPORTANT: If the namespace is not listed when you access the Analytics submenu of the Management Portal, double-check that you performed all parts of step 6.
