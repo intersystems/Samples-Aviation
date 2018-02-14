@@ -49,19 +49,20 @@ After setup, the data is available for use in various ways:
   simple analyses of that data.
 
 ## Setup instructions
-1. Download the repo to your local disk and uncompress it.
-2. Open the InterSystems IRIS Terminal.
-3. Enter the following command (replacing with the namespace where you want to load the sample):
+1. Clone or [download](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=asamples) the repository.
+2. If you have not yet created a namespace in InterSystems IRIS, follow the [detailed instructions](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSA_config_namespace_create) to do so.
+3. Open the InterSystems IRIS Terminal.
+4. Enter the following command (replacing with the namespace where you want to load the sample):
 ```
    ZN "mynamespace"
    ```
-4. Enter the following commands (replacing with the full path of the file `buildsample/buildsampleaviation.mac`):
+5. Enter the following commands (replacing with the full path of the file `buildsample/buildsampleaviation.mac`):
 ```
    do $system.OBJ.Load("full-path-to-buildsampleaviation.rtn","ck")
    do ^buildsampleaviation
 ```
-5. Then answer any prompts.
-6. After the routine has finished running, create a web application for use in this namespace and 
+6. Then answer any prompts.
+7. After the routine has finished running, create a web application for use in this namespace and 
    enable that web app for use with analytics. Here's how:
 
    a. In the Management Portal, select System Administration > Security > Applications > Web Applications. 
@@ -81,7 +82,7 @@ After setup, the data is available for use in various ways:
    If you have already defined a web application for use in this namespace, check the definiton of that web
    application and ensure that both DeepSee and iKnow check boxes are selected.
 
-After step 6, when you access the Analytics submenu of the Management Portal, this namespace will be listed.
+After step 7, when you access the Analytics submenu of the Management Portal, this namespace will be listed.
 For example, you can now use the Analyzer with the cubes that are included within this sample. 
 
-IMPORTANT: If the namespace is not listed when you access the Analytics submenu of the Management Portal, double-check that you performed all parts of step 6.
+IMPORTANT: If the namespace is not listed when you access the Analytics submenu of the Management Portal, double-check that you performed all parts of step 7.
