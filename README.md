@@ -9,11 +9,11 @@ SAMPLES-AVIATION provides sample data for use in exploring InterSystems IRIS Tex
 In order to use this sample, you must have an InterSystems IRIS license that includes these capabilities.
 
 After setup, the data is available for use in various ways:
-* For use in [InterSystems IRIS Natural Language Processing](http://docs.intersystems.com/irislatest?KEY=GIKNOW)
+* For use in [InterSystems IRIS Natural Language Processing](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW)
   
   The repo also contains specific samples related to NLP.
-* For use with [InterSystems IRIS SQL Search](http://docs.intersystems.com/irislatest?KEY=GSQLSRCH)
-* For use with [Text Analytics options in InterSystems IRIS Business Intelligence](http://docs.intersystems.com/irislatest?KEY=D2MODADV_ch_iknow)
+* For use with [InterSystems IRIS SQL Search](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSQLSRCH)
+* For use with [Text Analytics options in InterSystems IRIS Business Intelligence](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=D2MODADV_ch_iknow)
   
   The repo also contains specific samples related to these options.
 
@@ -33,16 +33,13 @@ Repo items related to the data
 Repo items for use with InterSystems IRIS Natural Language Processing (NLP) 
 ************************************************************************************
 * The Aviation.ReportDomain class defines a sample NLP domain based on the data
-  from this repo. You can run NLP queries against this domain. See 
-  http://docs.intersystems.com/irislatest?KEY=GIKNOW
+  from this repo. You can run NLP queries against this domain. See [Using InterSystems IRIS Natural Language Processing](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW).
 
 * The Aviation.Classification.Utils class illustrates how to build and test Text 
-  Categorization models programmatically. See 
-  http://docs.intersystems.com/irislatest?KEY=GIKNOW_textcat
+  Categorization models programmatically. See [Text Categorization](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW_textcat).
 
 * The Aviation.Metrics.Builder and Aviation.Metrics.Definition classes demonstrate
-  how to customize NLP by adding custom metrics. See 
-  http://docs.intersystems.com/irislatest?KEY=GIKNOW_metrics
+  how to customize NLP by adding custom metrics. See [Custom Metrics](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls??KEY=GIKNOW_metrics).
 
 * The Aviation.UI package contains two sample classes that you can use to perform
   NLP queries and visualize the results.
@@ -51,8 +48,7 @@ Repo items for use with InterSystems IRIS Natural Language Processing (NLP)
 Repo items for use with Text Analytics options in InterSystems IRIS Business Intelligence (BI)
 ************************************************************************************
 * The Cubes package contains BI cube definitions that use Text Analytics features
-  and that use the data in this repo. See 
-  http://docs.intersystems.com/irislatest?KEY=D2MODADV_ch_iknow for details.
+  and that use the data in this repo. See [Using Text Analytics in Cubes](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page?KEY=D2MODADV_ch_iknow) for details.
 * KPI.TopConcepts contains a BI KPI that uses a Text Analytics query.
 * KPI.Actions defines a KPI action (which is used on a dashboard also in this sample).
 * Aviation.DashboardsEtc defines Business Intelligence pivot tables and dashboards
@@ -65,13 +61,14 @@ Setup instructions
 1. Download the repo to your local disk and uncompress it.
 2. Open the InterSystems IRIS Terminal.
 3. Enter the following command (replacing with the namespace where you want to load the sample):
-
+...
    ZN "mynamespace"
+   ...
 4. Enter the following commands (replacing with the full path of the file buildsample/buildsampleaviation.mac):
-
+...
    do $system.OBJ.Load("full-path-to-buildsampleaviation.rtn","ck")
-
    do ^buildsampleaviation
+...
 5. Then answer any prompts.
 6. After the routine has finished running, create a web application for use in this namespace and 
    enable that web app for use with analytics. Here's how:
