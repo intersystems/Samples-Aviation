@@ -50,7 +50,7 @@ After setup, the data is available for use in various ways:
 
 ## Setup instructions
 1. Clone or [download](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=asamples) the repository.
-2. If you have not yet created a namespace in InterSystems IRIS, follow the [detailed instructions](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSA_config_namespace_create) to do so.
+2. If you have not yet created a namespace in InterSystems IRIS, follow the [detailed instructions](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=ASAMPLES_createns) to do so.
 3. Open the InterSystems IRIS Terminal.
 4. Enter the following command (replacing with the namespace where you want to load the sample):
 ```
