@@ -16,7 +16,7 @@ After setup, the data is available for use in various ways:
   
   The repo also contains specific samples related to these options.
 
-##Repo items related to the data
+## Repo items related to the data
 * The Aviation.Aircraft, Aviation.Crew, and Aviation.Event classes are persistent
   classes/tables that collectively represent a selected subset of aviation 
   incidents reported to the U.S. National Transportation Safety Board. 
@@ -26,7 +26,7 @@ After setup, the data is available for use in various ways:
 
 * The Aviation.Utils class is a helper classes used by the repo setup routine (see end).
 
-##Repo items for use with InterSystems IRIS Natural Language Processing (NLP) 
+## Repo items for use with InterSystems IRIS Natural Language Processing (NLP) 
 * The Aviation.ReportDomain class defines a sample NLP domain based on the data
   from this repo. You can run NLP queries against this domain. See [Using InterSystems IRIS Natural Language Processing](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW).
 
@@ -39,7 +39,7 @@ After setup, the data is available for use in various ways:
 * The Aviation.UI package contains two sample classes that you can use to perform
   NLP queries and visualize the results.
 
-##Repo items for use with Text Analytics options in InterSystems IRIS Business Intelligence (BI)
+## Repo items for use with Text Analytics options in InterSystems IRIS Business Intelligence (BI)
 * The Cubes package contains BI cube definitions that use Text Analytics features
   and that use the data in this repo. See [Using Text Analytics in Cubes](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page?KEY=D2MODADV_ch_iknow) for details.
 * KPI.TopConcepts contains a BI KPI that uses a Text Analytics query.
@@ -48,7 +48,7 @@ After setup, the data is available for use in various ways:
   that display the data in this repo and that provide you the ability of performing
   simple analyses of that data.
 
-##Setup instructions
+## Setup instructions
 1. Download the repo to your local disk and uncompress it.
 2. Open the InterSystems IRIS Terminal.
 3. Enter the following command (replacing with the namespace where you want to load the sample):
@@ -68,7 +68,7 @@ After setup, the data is available for use in various ways:
 
    b. Click Create New Web Application. 
 
-   c. For name, type csp/mynamespace where namespace is the specific namespace you're using. 
+   c. For name, type `csp/mynamespace` where namespace is the specific namespace you're using. 
 
    d. For Namespace, select the same namespace. 
 
