@@ -51,6 +51,7 @@ After setup, the data is available for use in various ways:
 ## Setup instructions
 1. Clone or [download](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=asamples) the repository.
 2. If you have not yet created a namespace in InterSystems IRIS, follow the [detailed instructions](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=ASAMPLES_createns) to do so.
+The preceding instructions also provide the steps to create a web application for use in this namespace and enable that web app for use with analytics. Complete those steps as well.
 3. Open the InterSystems IRIS Terminal.
 4. Enter the following command (replacing with the namespace where you want to load the sample):
 ```
@@ -62,27 +63,3 @@ After setup, the data is available for use in various ways:
    do ^buildsampleaviation
 ```
 6. Then answer any prompts.
-7. After the routine has finished running, create a web application for use in this namespace and 
-   enable that web app for use with analytics. Here's how:
-
-   a. In the Management Portal, select System Administration > Security > Applications > Web Applications. 
-
-   b. Click Create New Web Application. 
-
-   c. For name, type `csp/mynamespace` where namespace is the specific namespace you're using. 
-
-   d. For Namespace, select the same namespace. 
-
-   e. Check the DeepSee and iKnow check boxes. 
-
-   f. Accept all other defaults. 
-
-   g. Click Save.
-
-   If you have already defined a web application for use in this namespace, check the definiton of that web
-   application and ensure that both DeepSee and iKnow check boxes are selected.
-
-After step 7, when you access the Analytics submenu of the Management Portal, this namespace will be listed.
-For example, you can now use the Analyzer with the cubes that are included within this sample. 
-
-IMPORTANT: If the namespace is not listed when you access the Analytics submenu of the Management Portal, double-check that you performed all parts of step 7.
