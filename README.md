@@ -56,9 +56,10 @@ After setup, the data is available for use in various ways:
 ```
    ZN "mynamespace"
    ```
-5. Enter the following commands (replacing with the full path of the file `buildsample/buildsampleaviation.mac`):
+5. Enter the following commands (replacing with the full path of the file `buildsample/Build.AviationSample.cls`):
 ```
-   do $system.OBJ.Load("full-path-to-buildsampleaviation.rtn","ck")
-   do ^buildsampleaviation
+   do $system.OBJ.Load("full-path-to-Build.AviationSample.cls","ck")
+   do ##class(Build.AviationSample).Build()
 ```
-6. Then answer any prompts.
+6. When prompted, enter the full path of the directory to which you downloaded this sample. The method then loads and compiles the code and performs other needed setup steps.
+
