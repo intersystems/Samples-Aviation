@@ -6,7 +6,7 @@ Include %IKPublic
 /// 	<li>The <b>BI Aviation demo</b> demonstrates how the iKnow featues embedded in
 /// 		DeepSee can be used to combine analysis of structured and unstructured data. It can be
 /// 		configured by calling the <method>SetupCube</method> class method in this class. </li>
-/// 	<li>The <b>Tex Analytics Aviation demo</b> uses the same dataset, but just loads it as a normal
+/// 	<li>The <b>Text Analytics Aviation demo</b> uses the same dataset, but just loads it as a normal
 /// 		standalone iKnow domain, which can be explored to the general iKnow APIs. This domain is
 /// 		fully defined through the domain definition in <class>Aviation.ReportDomain</class> and can
 /// 		be set up by calling its %Build() method. This class' <method>SetupStandalone</method>
