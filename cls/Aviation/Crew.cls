@@ -96,7 +96,7 @@ Storage Default
 <IdLocation>^Aviation.AircraftC("Crew")</IdLocation>
 <IndexLocation>^Aviation.CrewI</IndexLocation>
 <StreamLocation>^Aviation.CrewS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }
