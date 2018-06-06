@@ -338,7 +338,7 @@ Storage Default
 <IdLocation>^Aviation.EventC("Aircraft")</IdLocation>
 <IndexLocation>^Aviation.AircraftI</IndexLocation>
 <StreamLocation>^Aviation.AircraftS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }
