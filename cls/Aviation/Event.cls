@@ -271,7 +271,7 @@ Storage Default
 <IdLocation>^Aviation.EventD</IdLocation>
 <IndexLocation>^Aviation.EventI</IndexLocation>
 <StreamLocation>^Aviation.EventS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }
