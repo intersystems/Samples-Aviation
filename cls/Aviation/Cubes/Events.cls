@@ -61,12 +61,6 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 </hierarchy>
 </dimension>
 
-<dimension name="SetBuilderD" displayName="Sets" type="computed" dimensionClass="%DeepSee.SetBuilder.ComputedDimension" >
-<hierarchy name="H1" >
-<level name="Set" />
-</hierarchy>
-</dimension>
-
 <measure sourceProperty="NarrativeFull" name="Report" displayName="Report" disabled="false" aggregate="COUNT" type="iKnow" hidden="false" searchable="false" iKnowSource="string" iKnowParameters="MAT:SkipRelations::0" iKnowDictionaries="Injuries,Maneuvres,Pilot skills,Weather conditions"></measure>
 <measure sourceProperty="InjuriesTotal" name="InjuriesTotal" disabled="false" type="number" hidden="false" searchable="false"></measure>
 
