@@ -93,9 +93,14 @@ ClassMethod run(stagingroot As %String = "", interactive As %Boolean = 0)
     }
 
     if interactive {
-        write !, "Running the Aviation.Utils.Setup() method..."
+        write !, "Running the Aviation.Utils.SetupStandalone() method to initialize the NLP domain"
     }
-    do ##class(Aviation.Utils).Setup()
+    do ##class(Aviation.Utils).SetupStandalone()
+
+    if interactive {
+        write !!, "If you would also like to set up the Aviation demo for use with InterSystems IRIS BI, run Aviation.Utils.SetupCube()"
+    }
+    
     return 1
 }
 

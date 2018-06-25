@@ -28,14 +28,8 @@ Parameter CUBENAME = "AviationEvents";
 
 Parameter MEASURENAME = "Report";
 
-/// <i>Deprecated</i>: use <method>SetupCube</method> instead.	
-ClassMethod Setup() As %Status [ Internal ]
-{
-	quit ..SetupCube()
-}
-
 ///  Utility method to load all relevant data and build the
-///  <class>Aviation.Accidents</class> cube for the DeepSee Aviation demo.	
+///  <class>Aviation.Cubes.Events</class> cube for the DeepSee Aviation demo.	
 ClassMethod SetupCube() As %Status
 {
 	try {
@@ -84,8 +78,7 @@ ClassMethod SetupCube() As %Status
 /// <p>Sets up a regular iKnow domain and loads the Aviation demo dataset into it by calling the 
 /// <class>Aviation.ReportDomain</class> %Build() method after enabling it and configuring CSP access
 /// to %iKnow UI classes for the SAMPLES web application.</p>
-/// <p>Note that the <var>pDomainName</var>, <var>pMetaFields</var>, <var>pLoadTermLists</var> arguments are now deprecated.</p>
-ClassMethod SetupStandalone(pDomainName As %String = "", pMetaFields As %String = "", pLoadTermLists As %Boolean = 1, pVerbose As %Boolean = 1) As %Status
+ClassMethod SetupStandalone(pLoadTermLists As %Boolean = 1, pVerbose As %Boolean = 1) As %Status
 {
 	try {
 		do EnableIKnow^%SYS.cspServer("/csp/samples/")
@@ -93,22 +86,8 @@ ClassMethod SetupStandalone(pDomainName As %String = "", pMetaFields As %String 
 		write !,"WARNING: failed to enable iKnow sample UI classes for this namespace."
 	}
 	
-	if (pDomainName_pMetaFields)'="" {
-		write !,"WARNING: The pDomainName and pMetaFields arguments have been deprecated!"
-	}
-	
 	set tSC = $$$OK
 	try {
-		
-		// Enabling the Aviation Event demo domain.
-		// Note that this step is only required for licensing reasons, as the outcome of the compile-time
-		// actions taken by an iKnow domain definition could not be packaged in the distributed SAMPLES 
-		// database before knowing the license used by the actual Cache instance.
-		
-		write:pVerbose !,"Enabling Aviation Event demo domain..."
-		set tSC = ..EnableDomainDefinition()
-		quit:$$$ISERR(tSC)
-		
 		set tSC = ##class(Aviation.ReportDomain).%Build(pVerbose)
 		quit:$$$ISERR(tSC)
 		
@@ -125,45 +104,6 @@ ClassMethod SetupStandalone(pDomainName As %String = "", pMetaFields As %String 
 	quit tSC
 }
 
-/// DO NOT MODIFY OR USE THIS CODE OUTSIDE OF ITS INVOCATION BY SetupStandalone()
-ClassMethod EnableDomainDefinition() As %Status [ Internal ]
-{
-	set tSC = $$$OK
-	try {		
-		set tXData = ##class(%Dictionary.XDataDefinition).%OpenId("Aviation.ReportDomain||Domain")
-		set tNewStream = ##class(%Stream.TmpCharacter).%New()
-		
-		// modify first line:
-		set tFirstLine = tXData.Data.ReadLine()
-		set tFirstLine = $replace(tFirstLine,"disabled=""true""","disabled=""false""")
-		set tSC = tNewStream.WriteLine(tFirstLine)
-		quit:$$$ISERR(tSC)
-		
-		while 'tXData.Data.AtEnd {
-			set tLength = 32000
-			set tLine = tXData.Data.ReadLine(.tLength, .tSC)
-			quit:$$$ISERR(tSC)
-			set tSC = tNewStream.WriteLine(tLine)
-			quit:$$$ISERR(tSC)
-		}
-		
-		set tSC = tXData.Data.Clear()
-		quit:$$$ISERR(tSC)
-		
-		set tSC = tXData.Data.CopyFromAndSave(tNewStream)
-		quit:$$$ISERR(tSC)
-		
-		set tSC = tXData.%Save()
-		quit:$$$ISERR(tSC)
-		
-		set tSC = $system.OBJ.Compile("Aviation.ReportDomain","c-d")
-		quit:$$$ISERR(tSC)
-		
-	} catch (ex) {
-		set tSC = ex.AsStatus()
-	}
-	quit tSC
-}
 
 /// Returns the dictionaries to be used for matching with the Aviation dataset in a 
 /// pseudo-form, so they can be used both for building Term Lists (see

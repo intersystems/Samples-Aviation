@@ -2,10 +2,6 @@
 /// <p>This class wraps all settings for the Aviation Events demo domain in a single XData block.
 /// Check the documentation on "Domain Definitions" or the class reference of
 /// <class>%iKnow.DomainDefinition</class> for more details.</p>
-/// <p>Note: for licensing reasons, this domain is disabled by default. To enable it, open this class 
-/// in any IDE, change the "disabled" property in the root &lt;domain&gt; element of the
-/// <xdata>Domain</xdata> XData block to "false" and compile the class. Alternatively, run the 
-/// SetupStandalone() method in <class>Aviation.Utils</class>.
 /// <p><b>Note on the data</b>: The dataset provided in this sample demo is only a lightweight
 /// subset of the full NTSB dataset, which is available from 
 /// <a href="http://www.ntsb.gov/" target="_blank">http://www.ntsb.gov</a>. This data is supplied
@@ -16,7 +12,7 @@ Class Aviation.ReportDomain Extends %iKnow.DomainDefinition
 
 XData Domain [ XMLNamespace = "http://www.intersystems.com/iknow" ]
 {
-<domain name="Aviation Events demo" disabled="true">
+<domain name="Aviation Events demo">
 
 <!-- use parameter elements to configure domain-level parameters -->
 <parameter name="Status" value="1" />
