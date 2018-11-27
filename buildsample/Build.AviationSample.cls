@@ -74,7 +74,7 @@ ClassMethod run(stagingroot As %String = "", interactive As %Boolean = 0)
     if interactive {
         write !, "Loading data..."
     }
-    set file=stagingroot_"/gbl/Aviation.xml" ;works on both Windows and Unix
+    set file=stagingroot_"/gbl/aviation.xml" ;works on both Windows and Unix
     if '##class(%File).Exists(file) {
         if interactive {
             write !!, "Looking for "_file
