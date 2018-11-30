@@ -98,7 +98,7 @@ ClassMethod run(stagingroot As %String = "", interactive As %Boolean = 0)
     do ##class(Aviation.Utils).SetupStandalone()
 
     if interactive {
-        write !!, "If you would also like to set up the Aviation demo for use with InterSystems IRIS BI, run Aviation.Utils.SetupCube()"
+        write !!, "If you would also like to set up the Aviation demo for use with InterSystems IRIS BI, run ##class(Aviation.Utils).SetupCube()"
     }
     
     return 1
