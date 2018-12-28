@@ -59,10 +59,10 @@ After setup, the data is available for use in various ways:
 
 2. In the InterSystems IRIS Management Portal, create a namespace called SAMPLES. You will load the sample data into this namespace. If you need help creating the namespace, see [Creating a Namespace and Database to Hold Samples](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=ASAMPLES_createns). 
 3. To enable the SAMPLES web application for use with InterSystems IRIS Analytics:
-   a. In the Management Portal, click System Administration > Security > Applications > Web Applications.
-   b. Click the /csp/samples link in the leftmost column. This assumes that the namespace you created is called SAMPLES.
-   c. In the Enable section, select Analytics.
-   d. Click Save.
+    * a.  In the Management Portal, click System Administration > Security > Applications > Web Applications.
+    * b.  Click the /csp/samples link in the leftmost column. This assumes that the namespace you created is called SAMPLES.
+    * c.  In the Enable section, select Analytics.
+    * d.  Click Save.
 4. Open the InterSystems IRIS Terminal. If you used the default SYSTEM account when installing InterSystems IRIS, the username is \_system.
 5. Enter the following command, where SAMPLES is the namespace where the sample will be loaded:
 ```
