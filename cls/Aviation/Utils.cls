@@ -1,26 +1,24 @@
 Include %IKPublic
 
 /// Use or operation of this code is subject to acceptance of the license available in the code repository for this code.
-/// <p>This class groups code for setting up two demos:</p>
-/// <ul>
-/// 	<li>The <b>BI Aviation demo</b> demonstrates how the iKnow featues embedded in
+/// This class groups code for setting up two demos:
+/// 	    - The BI Aviation demo</b> demonstrates how the iKnow featues embedded in
 /// 		DeepSee can be used to combine analysis of structured and unstructured data. It can be
-/// 		configured by calling the <method>SetupCube</method> class method in this class. </li>
-/// 	<li>The <b>Text Analytics Aviation demo</b> uses the same dataset, but just loads it as a normal
+/// 		configured by calling the <method>SetupCube</method> class method in this class. </li> 	    
+/// 		- The Text Analytics Aviation demo</b> uses the same dataset, but just loads it as a normal
 /// 		standalone iKnow domain, which can be explored to the general iKnow APIs. This domain is
 /// 		fully defined through the domain definition in <class>Aviation.ReportDomain</class> and can
 /// 		be set up by calling its %Build() method. This class' <method>SetupStandalone</method>
 /// 		will invoke that %Build() method and call additional configuration code to ensure your
-/// 		security settings allow accessing the UI classes.</p>
-/// </ul>
+/// 		security settings allow accessing the UI classes.
 /// 
-///  <p>The classes in this package represent events involving aircraft as registered by the 
-///  <a href="http://www.ntsb.gov/" target="_blank">National Transportation Safety Board</a>.</p>
-///  <p><b>Note on the data</b>: The dataset provided in this sample demo is only a lightweight
+///  The classes in this package represent events involving aircraft as registered by the 
+///  National Transportation Safety Board.
+///  Note on the data</b>: The dataset provided in this sample demo is only a lightweight
 ///  subset of the full NTSB dataset, which is available from 
-///  <a href="http://www.ntsb.gov/" target="_blank">http://www.ntsb.gov</a>. This data is supplied
+///  http://www.ntsb.gov. This data is supplied
 ///  here for demonstration purposes only and neither intended nor warranted to be accurate.<br/>
-///  	Courtesy: National Transportation Safety Board</p>
+///  	Courtesy: National Transportation Safety Board
 Class Aviation.Utils Extends %RegisteredObject
 {
 
@@ -75,9 +73,9 @@ ClassMethod SetupCube() As %Status
 	quit tSC
 }
 
-/// <p>Sets up a regular iKnow domain and loads the Aviation demo dataset into it by calling the 
-/// <class>Aviation.ReportDomain</class> %Build() method after enabling it and configuring CSP access
-/// to %iKnow UI classes for the SAMPLES web application.</p>
+/// Sets up a regular iKnow domain and loads the Aviation demo dataset into it by calling the 
+/// Aviation.ReportDomain %Build() method after enabling it and configuring CSP access
+/// to %iKnow UI classes for the SAMPLES web application.
 ClassMethod SetupStandalone(pLoadTermLists As %Boolean = 1, pVerbose As %Boolean = 1) As %Status
 {
 	try {
@@ -107,8 +105,7 @@ ClassMethod SetupStandalone(pLoadTermLists As %Boolean = 1, pVerbose As %Boolean
 
 /// Returns the dictionaries to be used for matching with the Aviation dataset in a 
 /// pseudo-form, so they can be used both for building Term Lists (see
-/// <method>CreateTermLists</method>) and iKnow Dictionaries
-/// (<method>CreateIKnowDictionaries</method>).
+/// CreateTermLists method and iKnow Dictionaries (CreateIKnowDictionaries method)
 ClassMethod GetAviationDictionaries(Output pDictionaries) As %Status [ Internal ]
 {
 	kill pDictionaries 
@@ -168,9 +165,9 @@ ClassMethod GetAviationDictionaries(Output pDictionaries) As %Status [ Internal 
     s pDictionaries(2,":weather:winter",2) = "icy"
     s pDictionaries(2,":weather:winter",3) = "snow"
     s pDictionaries(2,":weather:winter",4) = "snow-covered"
-    s pDictionaries(2,":weather:thunderstorm") = "thunderstorm"
-    s pDictionaries(2,":weather:thunderstorm",1) = "thunderstorm"
-    s pDictionaries(2,":weather:thunderstorm",2) = "thunderstorms"
+    s pDictionaries(2,":weather:thunderm") = "thunderm"
+    s pDictionaries(2,":weather:thunderm",1) = "thunderm"
+    s pDictionaries(2,":weather:thunderm",2) = "thunderms"
     s pDictionaries(3) = "Injuries"
     s pDictionaries(3,":injuries:fatal") = "fatal"
     s pDictionaries(3,":injuries:fatal",1) = "died"
@@ -273,17 +270,17 @@ ClassMethod CreateTermLists() As %Status
 	quit tSC
 }
 
-/// <p>Loads <var>pMaxRecords</var> aviation event records from the official NTSB database, which
-/// can be downloaded as a Microsoft Access file from <a href="http://www.ntsb.gov/avdata/Access/">www.ntsb.gov</a>.
-/// The Access file needs to be exposed through ODBC using a DSN named <var>pDSN</var>. Any existing
+/// Loads pMaxRecords aviation event records from the official NTSB database, which
+/// can be downloaded as a Microsoft Access file from <a href="http://www.ntsb.gov/avdata/Access/">www.ntsb.gov.
+/// The Access file needs to be exposed through ODBC using a DSN named pDSN. Any existing
 /// information for a given event will be overwritten, so loading from the "update" databases on
-/// ntsb.gov will just append to your existing database.</p>
-/// <p>Set <var>pMaxRecords</var> to 0 to load all events from the database and use <var>pClearFirst</var>
-/// to specify whether existing events should be erased prior to the load. Using <var>pPrefList</var>,
-/// and <var>pWhereClause</var>, you can list specific events which need to be selected, as records
-/// are selected randomly from the full database. With <var>pSkipWhenEmpty</var>, a list of properties
+/// ntsb.gov will just append to your existing database.
+/// Set pMaxRecords to 0 to load all events from the database and use pClearFirst
+/// to specify whether existing events should be erased prior to the load. Using pPrefList,
+/// and pWhereClause, you can list specific events which need to be selected, as records
+/// are selected randomly from the full database. With pSkipWhenEmpty, a list of properties
 /// of the event, aircraft and crew records can be supplied which needs to be non-null for the record
-/// to be selected.</p>
+/// to be selected.
 ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Integer = 1200, pClearFirst As %Boolean = 1, pVerbose As %Boolean = 1, pSkipWhenEmpty As %List = {$lb($lb("NarrativeFull","LocationCoordsLongitude","InjuriesHighest","MidAir","SkyConditionNonCeiling"),$lb("Damage","AircraftCategory","FlightType"))}, pWhereClause As %String = "", pPrefList As %List = {$lb("20020611X00850","20030728X01207","20010123X00341")}) As %Status
 {
 	set tSC = $$$OK
@@ -302,7 +299,7 @@ ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Int
 	    set tSC = tConnection.Connect(pDSN,"","") 
 	    quit:$$$ISERR(tSC)
 
-		// prepare main event statements
+		// Prepare main event statements
 	    set tEventResultSet = ##class(%ResultSet).%New("%DynamicQueryGW:SQLGW")
 	    set tSQLPref = "SELECT *, -1 As FakeOrder FROM events WHERE ev_id = '"_$lts(pPrefList,"' OR ev_id = '")_"'"
 	    set tSQL = "SELECT *, (ev_time*ev_time) MOD 79 As FakeOrder FROM events WHERE " _ $s(pWhereClause="":"ev_year >= 2000", 1:pWhereClause)
@@ -321,7 +318,7 @@ ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Int
 	    set tSC = tEventResultSet.Execute()
 	    quit:$$$ISERR(tSC)
 	    
-	    // prepare other statements
+	    // Prepare other statements
 	    set tNarrativeResultSet = ##class(%ResultSet).%New("%DynamicQueryGW:SQLGW")
 	    set tAircraftResultSet = ##class(%ResultSet).%New("%DynamicQueryGW:SQLGW")
 	    set tCrewResultSet = ##class(%ResultSet).%New("%DynamicQueryGW:SQLGW")
@@ -427,7 +424,7 @@ ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Int
             set tEvent.WindVelocityIndicator = $case(tValue, "CALM":"Calm", "LVAR":"Light and variable", "SPEC":"Special", "UNK":"Unknown", "V":"Variable", :tValue)
             
             
-            // load first narrative for this event
+            // Load first narrative for this event
             set tSC = tNarrativeResultSet.Prepare("SELECT * FROM narratives WHERE ev_id = '"_tEventId_"' AND Aircraft_Key = 1",, tConnection)
             quit:$$$ISERR(tSC)
             set tSC = tNarrativeResultSet.Execute()
@@ -449,7 +446,7 @@ ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Int
             do tNarrativeResultSet.Close()
             
             
-            // verify pSkipWhenEmpty elements
+            // Verify pSkipWhenEmpty elements
             set ptr=0, tSkip=0
             while $listnext(tEventProps, ptr, tProp) {
 	            if ($property(tEvent, tProp)="") {
@@ -460,7 +457,7 @@ ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Int
             continue:tSkip
             
             
-            // loop through aircraft for this event
+            // Loop through aircraft for this event
             set tSC = tAircraftResultSet.Prepare("SELECT * FROM aircraft WHERE ev_id = '"_tEventId_"'",, tConnection)
             quit:$$$ISERR(tSC)
             set tSC = tAircraftResultSet.Execute()
@@ -549,7 +546,7 @@ ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Int
 		        set tAircraft.SeatsTotal = $zstrip(tAircraftResultSet.Get("total_seats"),"<>W")
 		        set tAircraft.SecondPilot = $zstrip(tAircraftResultSet.Get("second_pilot"),"<>W")
 		        
-	            // verify pSkipWhenEmpty elements
+	            // Verify pSkipWhenEmpty elements
    		        set ptr=0, tSkip=0
    	    	    while $listnext(tAircraftProps, ptr, tProp) {
 	        	    if ($property(tAircraft, tProp)="") {
@@ -593,7 +590,7 @@ ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Int
 			        set tCrew.ToxicologyTestPerformed = $zstrip(tCrewResultSet.Get("crew_tox_perf"),"<>W")
 			        
 			        
-		            // verify pSkipWhenEmpty elements
+		            // Verify pSkipWhenEmpty elements
 		            set ptr=0, tSkip=0
 		            while $listnext(tCrewProps, ptr, tProp) {
 			            if ($property(tCrew, tProp)="") {
@@ -606,12 +603,12 @@ ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Int
 		        }
 		        do tCrewResultSet.Close()
 		        
-		        // skip if no Crew entries left
+		        // Skip if no Crew entries left
 		        continue:'tAircraft.Crew.Count()
            	}
            	do tAircraftResultSet.Close()
            	
-           	// skip if no Aircraft entries left
+           	// Skip if no Aircraft entries left
            	if ('tEvent.Aircraft.Count()) {
 	           	set tSkipCount = tSkipCount+1
 	           	continue

@@ -1,8 +1,8 @@
 Include %IKInclude
 
 /// Use or operation of this code is subject to acceptance of the license available in the code repository for this code.
-/// <p>This page represents a mockup interface for typing in new aviation event reports for the
-/// <class>Aviation.Event</class> narrative columns. After typing in a report of a few
+/// This page represents a mockup interface for typing in new aviation event reports for the
+/// Aviation.Event narrative columns. After typing in a report of a few
 /// sentences and pressing the "process" button, the system will look for reports similar to the
 /// one being typed in using the basic similarity algorithm (first tab) and a slightly more
 /// elaborate matching-based approach (second tab). This matching-based approach constructs a
@@ -12,21 +12,21 @@ Include %IKInclude
 /// the matching-based alternative demonstrates how other iKnow API calls can be used together
 /// from a simple interface. More specifically, the matching-based approach has the advantage
 /// non-exact matches also contribute to the similarity, at the cost of performance and slight
-/// over-scoring of simple re-occurring words. </p>
+/// over-scoring of simple re-occurring words. 
 /// 
-/// <p>When clicking one of the suggested "similar" reports, a popup shows the basic details of
+/// When clicking one of the suggested "similar" reports, a popup shows the basic details of
 /// the similar event (time, location, aircraft, link to NTSB report) as well as the the contents
 /// of the existing report, with all entities (and CRCs) of the input text highlighted in this
 /// similar one. A second tab then reveals the presumed cause of that similar event as recorded
 /// by the NTSB, which may "help" the user get an idea of a likely cause for the event being
-/// described in his manual input. </p>
+/// described in his manual input. 
 /// 
-/// <p>Being a code sample, the code is supposed to be quite readable with some comments about
+/// Being a code sample, the code is supposed to be quite readable with some comments about
 /// what is being achieved by specific line(s) of code, as well as suggesting extensions
-/// developers might wish to make to make the demo perform better.</p>
+/// developers might wish to make to make the demo perform better.
 /// 
-/// <p>To set up the demo, run the following command from the terminal:
-/// <blockquote><pre>do ##class(Aviation.UI.Investigator).Setup()</pre></blockquote></p>
+/// To set up the demo, run the following command from the terminal:
+/// do ##class(Aviation.UI.Investigator).Setup()
 Class Aviation.UI.Investigator Extends %ZEN.Component.page
 {
 
@@ -60,7 +60,7 @@ Property inputSource As %ZEN.Datatype.integer;
 
 /// A filter string to restrict the scope of the similarity search.
 /// Either use an InitialExpression or add code to populate this property, similar to the
-/// filterPane and associated methods in <class>%iKnow.UI.AbstractPortal</class>
+/// filterPane and associated methods in %iKnow.UI.AbstractPortal
 Property filter As %ZEN.Datatype.string(ZENURL = "FILTER");
 
 /// The ID of the dictionary created as part of <method>BuildSrcDictionary</method>
@@ -199,8 +199,8 @@ queryName="GetTopSourcesByDictionary" autoExecute="false" OnExecuteResultSet="Ex
 </page>
 }
 
-/// <p>ZenMethod to process manual user input <var>pText</var> by the iKnow engine and store the
-/// ID of the generated Virtual Source in <property>inputSource</property>.</p>
+/// ZenMethod to process manual user input pText by the iKnow engine and store the
+/// ID of the generated Virtual Source in <property>inputSource</property>.
 Method ProcessInput(pText As %String(MAXLEN=32767), pLanguage As %String) As %String [ ZenMethod ]
 {
 	set tSC = $$$OK, tOldStatus = 0
@@ -208,7 +208,7 @@ Method ProcessInput(pText As %String(MAXLEN=32767), pLanguage As %String) As %St
 		set tDomainId = ..reportDomain
 		set tDomainName = $system.iKnow.GetDomainName(tDomainId)
 		
-		// drop the previous virtual source created
+		// Drop the previous virtual source created
 		do:..inputSource ##class(%iKnow.Source.Loader).DeleteVirtualSource(tDomainId, $zabs(..inputSource))
 		
 		// create a simple configuration object for pLanguage, if none exists yet
@@ -220,12 +220,12 @@ Method ProcessInput(pText As %String(MAXLEN=32767), pLanguage As %String) As %St
 			quit:$$$ISERR(tSC)
 		}
 		
-		// process pText, loading it as a virtual source
+		// Process pText, loading it as a virtual source
 		set tFullRef = "AviationInvestigatorInput "_$zdt($h)
 		set tSC = $system.iKnow.IndexString(tDomainName, tFullRef, pText, tConfigName, 1, .vSrcId)
 		quit:$$$ISERR(tSC)
 		
-		// store the generated (virtual) source ID
+		// Store the generated (virtual) source ID
 		set ..inputSource = vSrcId
 		
 	} catch (ex) {
@@ -258,7 +258,7 @@ Method BuildSrcDictionary() As %Status [ ZenMethod ]
 		set tDomainId = ..reportDomain
 		set tDomainIdCause = ..causeDomain
 		
-		// first kill existing dictionary
+		// First kill existing dictionary
 		set tDictId = ##class(%iKnow.Matching.DictionaryAPI).GetDictionaryId(tDomainId, ..#IKNOWDICTNAME)
 		set:tDictId>0 tSC = ##class(%iKnow.Matching.DictionaryAPI).DropDictionary(tDomainId, tDictId)
 		quit:$$$ISERR(tSC)
@@ -266,7 +266,7 @@ Method BuildSrcDictionary() As %Status [ ZenMethod ]
 		set:tDictIdCause>0 tSC = ##class(%iKnow.Matching.DictionaryAPI).DropDictionary(tDomainIdCause, tDictIdCause)
 		quit:$$$ISERR(tSC)
 		
-		// now create a new one, containing all entities and CRCs of the current source
+		// Now create a new one, containing all entities and CRCs of the current source
 		// NOTE: this is a very crude approach. refining this to all entities that are dominant
 		// in the input text and/or not too common in the overall domain (such as "pilot" etc),
 		// could improve the results.
@@ -301,7 +301,7 @@ Method BuildSrcDictionary() As %Status [ ZenMethod ]
 		}
 		quit:$$$ISERR(tSC)
 		
-		// now match all sources in the reports domain against this new dictionary
+		// Now match all sources in the reports domain against this new dictionary
 		set tSC = ##class(%iKnow.Matching.MatchingAPI).MatchSources(tDomainId, ..filter, $lb(..dictId))
 		quit:$$$ISERR(tSC)
 		
@@ -319,16 +319,15 @@ ClientMethod refreshDictionaryAsync() [ Language = javascript ]
 	var sc = zenPage.BuildSrcDictionary();
 	zen('tblDictionary').refreshContents();
 	
-	// also refresh source view panes, should they already be open before the matching process
+	// Also refresh source view panes, should they already be open before the matching process
 	// finished at the end of BuildSrcDictionary();
 	zen('htmlSource').refreshContents();
 	zen('htmlCause').refreshContents();
 }
 
 /// This client event, if present, is fired when the page 
-/// is first loaded or whenever it is resized.<br/>
-/// If this is called at load time, then <var>load</var> will
-/// be true.
+/// is first loaded or whenever it is resized.
+/// If this is called at load time, then load will be true.
 ClientMethod onlayoutHandler(load) [ Language = javascript ]
 {
 	zenPage.resizeGroups(load);
@@ -383,7 +382,7 @@ Method DrawPercentage(pTable As %ZEN.Component.tablePane, pName As %String, pSee
 }
 
 /// Utility method to draw source metadata in a &lt;tablePane&gt; column for a given source.
-/// <var>pSeed</var> is expected to be the name of the metadata field to display.
+/// pSeed is expected to be the name of the metadata field to display.
 Method DrawMetadata(pTable As %ZEN.Component.tablePane, pName As %String, pSeed As %String) As %Status
 {
 	set tExtId = $g(%query("extId"),$g(%query("externalId")))
@@ -394,7 +393,7 @@ Method DrawMetadata(pTable As %ZEN.Component.tablePane, pName As %String, pSeed 
 }
 
 /// Client-side method refreshing appropriate sections of the popup window using the
-/// <var>srcId</var> passed in.
+/// srcId passed in.
 ClientMethod displaySourceClient(srcId) [ Language = javascript ]
 {
 	zen('modSource').show();
@@ -412,7 +411,7 @@ ClientMethod summarize() [ Language = javascript ]
 	zen('htmlSource').refreshContents();
 }
 
-/// <p>Draws a number of event properties as a header for the popup.</p>
+/// Draws a number of event properties as a header for the popup.
 Method DrawEventHeader(pSeed As %String) As %Status
 {
 	set tSC = $$$OK
@@ -445,11 +444,11 @@ Method DrawEventHeader(pSeed As %String) As %Status
 	quit tSC
 }
 
-/// <p>Draws the contents of a source (report or cause, based on <var>pSeed</var>) as identified by
+/// Draws the contents of a source (report or cause, based on pSeed) as identified by
 /// the value of <property>selectedSource</property>. The source is summarized if
 /// <property>summaryLength</property> is non-zero (interpreted as the number of sentences) and
 /// any matches against the dictionary created by <method>BuildSrcDictionary</method> is
-/// highlighted.</p>
+/// highlighted.
 Method DrawSource(pSeed As %String) As %Status
 {
 	set tSC = $$$OK
@@ -476,7 +475,7 @@ Method DrawSource(pSeed As %String) As %Status
 		set:pSeed="CAUSE" tSC = ##class(%iKnow.Matching.MatchingAPI).MatchSource(tDomainId, tSrcId, $lb(tDictId))
 		quit:$$$ISERR(tSC)
 		
-		w "<p>"
+		w ""
 		
 		set srcObj = ##class(%iKnow.Objects.Source).PKINDEXOpen(tDomainId, tSrcId)
 		set sentBase = srcObj.FirstSentenceId-1
@@ -504,7 +503,7 @@ Method DrawSource(pSeed As %String) As %Status
 		}
 		w:(prevPos=(sentBase+srcObj.SentenceCount)) " ..."
 		
-		w "</p>"
+		w ""
 		
 	} catch (ex) {
 		set tSC = ex.AsStatus()
@@ -589,7 +588,7 @@ table#metadata td.left {
 }
 
 /// Sets up the Aviation Investigator demo. If the Standalone Aviation demo was already
-/// set up through <class>Aviation.Utils</class>, that domain will be used.
+/// set up through Aviation.Utils, that domain will be used.
 ClassMethod Setup() As %Status
 {
 	try {
