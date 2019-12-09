@@ -1,12 +1,11 @@
 /// Use or operation of this code is subject to acceptance of the license available in the code repository for this code.
-/// <p>This class wraps all settings for the Aviation Events demo domain in a single XData block.
-/// Check the documentation on "Domain Definitions" or the class reference of
-/// <class>%iKnow.DomainDefinition</class> for more details.</p>
-/// <p><b>Note on the data</b>: The dataset provided in this sample demo is only a lightweight
-/// subset of the full NTSB dataset, which is available from 
-/// <a href="http://www.ntsb.gov/" target="_blank">http://www.ntsb.gov</a>. This data is supplied
-/// here for demonstration purposes only and neither intended nor warranted to be accurate.<br/>
-/// Courtesy: National Transportation Safety Board</p>
+///  This class represents the details on aircraft involved in events registered by the 
+///  National Transportation Safety Board.
+///  Note on the data</b>: The dataset provided in this sample demo is only a lightweight
+///  subset of the full NTSB dataset, which is available from 
+///  http://www.ntsb.gov. This data is supplied
+///  here for demonstration purposes only and neither intended nor warranted to be accurate.
+///  	Courtesy: National Transportation Safety Board
 Class Aviation.ReportDomain Extends %iKnow.DomainDefinition
 {
 
