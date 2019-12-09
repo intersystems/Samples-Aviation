@@ -83,7 +83,7 @@ ClassMethod OptimizeClassifier() As %Status
 		set tSC = tOptimizer.LoadTermsArray(.tCandidates, 2)
 		quit:$$$ISERR(tSC)
 		
-		// fFire off the optimization process
+		// Fire off the optimization process
 		set tOptimizer.Verbose = 1
 		set tSC = tOptimizer.Optimize(20)
 		quit:$$$ISERR(tSC)
