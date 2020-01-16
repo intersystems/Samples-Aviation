@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="samples-aviation.ZPM">
+    <Module>
+      <Name>samples-aviation</Name>
+      <Version>1.0.0</Version>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="Aviation.PKG"/>
+      <Resource Name="Aviation.AircraftD.GBL"/>
+      <Resource Name="Aviation.AircraftI.GBL"/>
+      <Resource Name="Aviation.Countries.GBL"/>
+      <Resource Name="Aviation.CrewD.GBL"/>
+      <Resource Name="Aviation.CrewI.GBL"/>
+      <Resource Name="Aviation.EventD.GBL"/>
+      <Resource Name="Aviation.EventI.GBL"/>
+      <Resource Name="Aviation.States.GBL"/>
+      <SystemSetting Name="CSP.DefaultFileCharset" Value="UTF-8"/>
+      <Invokes>
+        <Invoke Class="Aviation.Utils" Method="SetupStandalone"></Invoke>
+        <Invoke Class="Aviation.Utils" Method="SetupCube"></Invoke>
+      </Invokes>
+    </Module>
+    
+  </Document>
+</Export>

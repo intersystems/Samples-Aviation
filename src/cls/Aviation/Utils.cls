@@ -32,10 +32,13 @@ Parameter MEASURENAME = "Report";
 ///  <class>Aviation.Cubes.Events</class> cube for the DeepSee Aviation demo.	
 ClassMethod SetupCube() As %Status
 {
+	set namespace = $ZNspace
+	set app = $System.CSP.GetDefaultApp(namespace) _ "/"
+
 	try {
-		do EnableDeepSee^%SYS.cspServer("/csp/samples/")
+		do EnableDeepSee^%SYS.cspServer(app)
 	} catch (ex) {
-		write !,"WARNING: failed to enable DeepSee for this namespace."
+		write !,"WARNING: failed to enable DeepSee for "_namespace_" namespace."
 	}
 	
 	set tSC = $$$OK
@@ -80,10 +83,12 @@ ClassMethod SetupCube() As %Status
 /// to %iKnow UI classes for the SAMPLES web application.</p>
 ClassMethod SetupStandalone(pLoadTermLists As %Boolean = 1, pVerbose As %Boolean = 1) As %Status
 {
+	set namespace = $ZNspace
+	set app = $System.CSP.GetDefaultApp(namespace) _ "/"
 	try {
-		do EnableIKnow^%SYS.cspServer("/csp/samples/")
+		do EnableIKnow^%SYS.cspServer(app)
 	} catch (ex) {
-		write !,"WARNING: failed to enable iKnow sample UI classes for this namespace."
+		write !,"WARNING: failed to enable iKnow sample UI classes for "_namespace_" namespace."
 	}
 	
 	set tSC = $$$OK
@@ -92,7 +97,7 @@ ClassMethod SetupStandalone(pLoadTermLists As %Boolean = 1, pVerbose As %Boolean
 		quit:$$$ISERR(tSC)
 		
 		set tSC = ##class(%Library.RoutineMgr).GetWebServerPort(.tPort,.tServer,.tURLPrefix,.tURL)		
-		write:pVerbose !,"All done.",!!,"You can browse the contents of this domain using the Knowledge Portal at",!,tURL,"csp/sys/_iKnow.UI.KnowledgePortal.zen?$NAMESPACE=SAMPLES&domain="_##class(Aviation.ReportDomain).%GetDomainId(),!
+		write:pVerbose !,"All done.",!!,"You can browse the contents of this domain using the Knowledge Portal at",!,tURL,"csp/sys/_iKnow.UI.KnowledgePortal.zen?$NAMESPACE="_$ZNSpace_"&domain="_##class(Aviation.ReportDomain).%GetDomainId(),!
 		
 	} catch (ex) {
 		set tSC = ex.AsStatus()
@@ -103,7 +108,6 @@ ClassMethod SetupStandalone(pLoadTermLists As %Boolean = 1, pVerbose As %Boolean
 	}
 	quit tSC
 }
-
 
 /// Returns the dictionaries to be used for matching with the Aviation dataset in a 
 /// pseudo-form, so they can be used both for building Term Lists (see
@@ -647,4 +651,3 @@ ClassMethod LoadFromNTSB(pDSN As %String = "AviationAccess", pMaxRecords As %Int
 }
 
 }
-
