@@ -48,6 +48,24 @@ After setup, the data is available for use in various ways:
   simple analyses of that data.
 
 ## Setup instructions
+
+## Install with ZPM
+1. Install ZPM
+Get the release of the ZPM client from ZPM server: https://pm.community.intersystems.com/packages/zpm/latest/installer
+
+It is ObjectScript package in XML, so it could be installed by importing into classes via Management Portal, or by terminal:
+```
+USER>Do $System.OBJ.Load("/yourpath/zpm.xml","ck")
+```
+
+[Learn more](https://community.intersystems.com/post/introducing-intersystems-objectscript-package-manager)
+2. install module. You need Internet available:
+```
+zpm:USER>install samples-aviation
+```
+
+## Usual setup
+
 1. Clone or download the repository. 
 
    * On Windows, you can use the Download button or you can [automatically download the archive file](https://github.com/intersystems/Samples-Aviation/archive/master.zip). Once downloaded, open and save the contents of the archive file.
