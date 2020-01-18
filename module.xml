@@ -8,14 +8,10 @@
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="Aviation.PKG"/>
       <Resource Name="Aviation.AircraftD.GBL"/>
-      <Resource Name="Aviation.AircraftI.GBL"/>
-      <Resource Name="Aviation.Countries.GBL"/>
-      <Resource Name="Aviation.CrewD.GBL"/>
-      <Resource Name="Aviation.CrewI.GBL"/>
-      <Resource Name="Aviation.EventD.GBL"/>
-      <Resource Name="Aviation.EventI.GBL"/>
-      <Resource Name="Aviation.States.GBL"/>
-      <SystemSetting Name="CSP.DefaultFileCharset" Value="UTF-8"/>
+       <Resource Name="Aviation.States.GBL"/>
+       <Resource Name="Aviation.Countries.GBL"/>
+       <Resource Name="Aviation.CrewD.GBL"/>
+       <Resource Name="Aviation.EventD.GBL"/>
       <Invokes>
         <Invoke Class="Aviation.Utils" Method="SetupStandalone"></Invoke>
         <Invoke Class="Aviation.Utils" Method="SetupCube"></Invoke>
