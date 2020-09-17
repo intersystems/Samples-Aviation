@@ -57,7 +57,7 @@ ClassMethod run(stagingroot As %String = "", interactive As %Boolean = 0)
     }
 
     //load and compile classes ***************************
-    set dir=stagingroot_"/cls/" ;works on both Windows and Unix
+    set dir=stagingroot_"/src/cls/" ;works on both Windows and Unix
     if '##class(%File).DirectoryExists(dir) {
         if interactive {
             write !!, "Looking for "_dir
@@ -74,7 +74,7 @@ ClassMethod run(stagingroot As %String = "", interactive As %Boolean = 0)
     if interactive {
         write !, "Loading data..."
     }
-    set file=stagingroot_"/gbl/aviation.xml" ;works on both Windows and Unix
+    set file=stagingroot_"/gbl/Aviation.AircraftD.xml" ;works on both Windows and Unix
     if '##class(%File).Exists(file) {
         if interactive {
             write !!, "Looking for "_file
