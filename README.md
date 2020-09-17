@@ -25,7 +25,7 @@ After setup, the data is available for use in various ways:
   purposes only and neither intended nor warranted to be accurate. (Courtesy: [National Transportation
   Safety Board](http://www.ntsb.gov))
   
-* Upon setup (see end), data is loaded from the `gbl/Aviation.xml` file into these
+* Upon setup (see end), data is loaded from the `gbl/Aviation.AircraftD.xml` file into these
   classes.
 
 * The `Aviation.Utils` class is a helper classes used by the repo setup routine (see end).
