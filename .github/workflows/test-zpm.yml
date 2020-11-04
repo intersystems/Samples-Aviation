@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: ZPM test
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -18,9 +18,8 @@ jobs:
       container_image: intersystemsdc/iris-community:2020.4.0.524.0-zpm
       instance: iris
       
-    # outputs:
-    #  docker-log: ${{ steps.container-log.outputs.test }}
-    #  zpm-log: ${{ steps.zpm-test.outputs.test }}
+    outputs:
+      zpm-log: ${{ steps.zpm-test.outputs }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -35,7 +34,7 @@ jobs:
           docker run -d --name $instance -v $GITHUB_WORKSPACE:/source $container_image
           echo halt > wait
           # build test script
-          # docker exec $instance bash -c "printf 'zpm\nload /source\n' > test-zpm.script"
+          # docker exec $instance bash -c "printf 'zpm\nload /source\nquit\nhalt\n' > test-zpm.script"
           # docker exec my-iris bash -c "iris session iris < test-zpm3.script"
           # Wait for instance to be ready
           until docker exec $instance iris session $instance < wait; do sleep 1; done
