@@ -1,11 +1,11 @@
 # Samples-Aviation
-This is the README file for SAMPLES-AVIATION. 
-The end of the file has setup instructions.
-************************************************************************************
-Use or operation of this code is subject to acceptance of the license available in the code 
-repository for this code.
-************************************************************************************
-SAMPLES-AVIATION provides sample data for use in exploring InterSystems IRIS Text Analytics capabilities. 
+
+This is the README file for Samples-Aviation. The end of the file has setup instructions for installing the sample using [zpm](https://github.com/intersystems-community/zpm) or plain ObjectScript.
+
+> Use or operation of this code is subject to acceptance of the license available in the code 
+> repository for this code.
+
+Samples-Aviation provides sample data for use in exploring InterSystems IRIS Text Analytics capabilities. 
 In order to use this sample, you must have an InterSystems IRIS license that includes these capabilities.
 
 After setup, the data is available for use in various ways:
@@ -14,7 +14,7 @@ After setup, the data is available for use in various ways:
 * For use with [InterSystems IRIS SQL Search](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSQLSRCH).
 * For use with [Text Analytics options in InterSystems IRIS Business Intelligence](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=D2MODADV_ch_iknow).
   
-  The repo also contains specific samples related to these options.
+The repo also contains specific samples related to these options.
 
 ## Repo items related to the data
 * The `Aviation.Aircraft`, `Aviation.Crew`, and `Aviation.Event` classes are persistent
@@ -25,7 +25,7 @@ After setup, the data is available for use in various ways:
   purposes only and neither intended nor warranted to be accurate. (Courtesy: [National Transportation
   Safety Board](http://www.ntsb.gov))
   
-* Upon setup (see end), data is loaded from the `gbl/Aviation.AircraftD.xml` file into these
+* Upon setup (see end), data is loaded from the `src/gbl/aviation-data.xml` file into these
   classes.
 
 * The `Aviation.Utils` class is a helper classes used by the repo setup routine (see end).
@@ -50,28 +50,30 @@ After setup, the data is available for use in various ways:
 ## Setup instructions
 
 ## Install with ZPM
-1. Install ZPM
-Get the release of the ZPM client from ZPM server: https://pm.community.intersystems.com/packages/zpm/latest/installer
 
-It is ObjectScript package in XML, so it could be installed by importing into classes via Management Portal, or by terminal:
-```
+1. Install ZPM
+Get the latest release of the ZPM client from https://pm.community.intersystems.com/packages/zpm/latest/installer
+
+You can download it as a regular ObjectScript package in XML, so it can be installed by the class import feature in the Management Portal, or using the terminal:
+```ObjectScript
 USER>Do $System.OBJ.Load("/yourpath/zpm.xml","ck")
 ```
 
 [Learn more](https://community.intersystems.com/post/introducing-intersystems-objectscript-package-manager)
-2. install module. You need Internet available:
-```
-zpm:USER>install samples-aviation
+
+2. After setting up ZPM, install the Samples-Aviation module. You'll need an Internet connection for this:
+```ObjectScript
+zpm:USER> install samples-aviation
 ```
 
-## Usual setup
+## Classic setup
 
 1. Clone or download the repository. 
 
    * On Windows, you can use the Download button or you can [automatically download the archive file](https://github.com/intersystems/Samples-Aviation/archive/master.zip). Once downloaded, open and save the contents of the archive file.
 
    * On UNIX or Linux, create a directory called "samples", and then enter the following from the shell:   
-```
+```Shell
    wget -qO- https://github.com/intersystems/Samples-Aviation/archive/master.tar.gz | tar xvz -C samples  
 ```
 
@@ -83,15 +85,15 @@ zpm:USER>install samples-aviation
     * d.  Click Save.
 4. Open the InterSystems IRIS Terminal. If you used the default SYSTEM account when installing InterSystems IRIS, the username is \_system.
 5. Enter the following command, where SAMPLES is the namespace where the sample will be loaded:
-```
+```ObjectScript
    ZN "SAMPLES"
 ```
 6. Enter the following command, replacing *install-dir* with the location where you downloaded the repo:
-```
+```ObjectScript
    do $system.OBJ.Load("install-dir\buildsample\Build.AviationSample.cls","ck")
 ```
 7. Enter the following command:
-```  
+```ObjectScript
    do ##class(Build.AviationSample).Build()
 ```
 8. When prompted, enter the full path of the directory that contains the README.md and LICENSE files of the repo you downloaded. The method then loads and compiles the code and performs other needed setup steps.
