@@ -17,6 +17,10 @@ jobs:
       package: Samples-Aviation
       container_image: intersystemsdc/iris-community:2020.4.0.524.0-zpm
       instance: iris
+      
+    outputs:
+      docker-log: ${{ steps.container-log.outputs.test }}
+      zpm-log: ${{ steps.zpm-test.outputs.test }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -24,6 +28,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Start ZPM-enabled Container
+        id: container-start
         run: |
           # Run InterSystems IRIS instance
           docker pull $container_image
@@ -36,6 +41,7 @@ jobs:
           docker exec $instance iris session $instance < wait; do sleep 1; done
           
       - name: Test ZPM installation
+        id: zpm-test
         run: |
           echo "zpm \"load /source\":1:1" > load-zpm
           docker exec --interactive $instance iris session $instance -B < load-zpm
