@@ -18,9 +18,9 @@ jobs:
       container_image: intersystemsdc/iris-community:2020.4.0.524.0-zpm
       instance: iris
       
-    outputs:
-      docker-log: ${{ steps.container-log.outputs.test }}
-      zpm-log: ${{ steps.zpm-test.outputs.test }}
+    # outputs:
+    #  docker-log: ${{ steps.container-log.outputs.test }}
+    #  zpm-log: ${{ steps.zpm-test.outputs.test }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -38,7 +38,7 @@ jobs:
           # docker exec $instance bash -c "printf 'zpm\nload /source\n' > test-zpm.script"
           # docker exec my-iris bash -c "iris session iris < test-zpm3.script"
           # Wait for instance to be ready
-          docker exec $instance iris session $instance < wait; do sleep 1; done
+          until docker exec $instance iris session $instance < wait; do sleep 1; done
           
       - name: Test ZPM installation
         id: zpm-test
