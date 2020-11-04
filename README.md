@@ -21,7 +21,7 @@ The repo also contains specific samples related to these options.
   classes/tables that collectively represent a selected subset of aviation 
   incidents reported to the U.S. National Transportation Safety Board. 
   The dataset provided in this sample demo is only a small subset of the full NTSB dataset,
-  which is available from [http://www.ntsb.gov]. This data is supplied here for demonstration
+  which is available from http://www.ntsb.gov. This data is supplied here for demonstration
   purposes only and neither intended nor warranted to be accurate. (Courtesy: [National Transportation
   Safety Board](http://www.ntsb.gov))
   
@@ -56,7 +56,7 @@ Get the latest release of the ZPM client from https://pm.community.intersystems.
 
 You can download it as a regular ObjectScript package in XML, so it can be installed by the class import feature in the Management Portal, or using the terminal:
 ```ObjectScript
-USER>Do $System.OBJ.Load("/yourpath/zpm.xml","ck")
+USER> Do $System.OBJ.Load("/yourpath/zpm.xml","ck")
 ```
 
 [Learn more](https://community.intersystems.com/post/introducing-intersystems-objectscript-package-manager)
@@ -73,28 +73,28 @@ zpm:USER> install samples-aviation
    * On Windows, you can use the Download button or you can [automatically download the archive file](https://github.com/intersystems/Samples-Aviation/archive/master.zip). Once downloaded, open and save the contents of the archive file.
 
    * On UNIX or Linux, create a directory called "samples", and then enter the following from the shell:   
-```Shell
-   wget -qO- https://github.com/intersystems/Samples-Aviation/archive/master.tar.gz | tar xvz -C samples  
-```
+     ```Shell
+     wget -qO- https://github.com/intersystems/Samples-Aviation/archive/master.tar.gz | tar xvz -C samples  
+     ```
 
 2. In the InterSystems IRIS Management Portal, create a namespace called SAMPLES. You will load the sample data into this namespace. If you need help creating the namespace, see [Creating a Namespace and Database to Hold Samples](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=ASAMPLES_createns). 
 3. To enable the SAMPLES web application for use with InterSystems IRIS Analytics:
-    * a.  In the Management Portal, click System Administration > Security > Applications > Web Applications.
-    * b.  Click the /csp/samples link in the leftmost column. This assumes that the namespace you created is called SAMPLES.
-    * c.  In the Enable section, select Analytics.
-    * d.  Click Save.
+    a.  In the Management Portal, click System Administration > Security > Applications > Web Applications.
+    b.  Click the `/csp/samples` link in the leftmost column. This assumes that the namespace you created is called SAMPLES.
+    c.  In the Enable section, select Analytics.
+    d.  Click Save.
 4. Open the InterSystems IRIS Terminal. If you used the default SYSTEM account when installing InterSystems IRIS, the username is \_system.
 5. Enter the following command, where SAMPLES is the namespace where the sample will be loaded:
-```ObjectScript
+   ```ObjectScript
    ZN "SAMPLES"
-```
+   ```
 6. Enter the following command, replacing *install-dir* with the location where you downloaded the repo:
-```ObjectScript
+   ```ObjectScript
    do $system.OBJ.Load("install-dir\buildsample\Build.AviationSample.cls","ck")
-```
+   ```
 7. Enter the following command:
-```ObjectScript
+   ```ObjectScript
    do ##class(Build.AviationSample).Build()
-```
+   ```
 8. When prompted, enter the full path of the directory that contains the README.md and LICENSE files of the repo you downloaded. The method then loads and compiles the code and performs other needed setup steps.
 
