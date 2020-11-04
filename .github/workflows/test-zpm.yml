@@ -17,9 +17,10 @@ jobs:
       package: Samples-Aviation
       container_image: intersystemsdc/iris-community:2020.4.0.524.0-zpm
       instance: iris
-      
-    outputs:
-      zpm-log: ${{ steps.zpm-test.outputs }}
+    
+    # something wrong here?
+    # outputs:
+    #  zpm-log: ${{ steps.zpm-test.outputs.version }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
