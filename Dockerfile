@@ -1,6 +1,7 @@
 ARG IMAGE=intersystems/iris:2019.1.0S.111.0
 ARG IMAGE=store/intersystems/iris-community:2019.3.0.309.0
 ARG IMAGE=store/intersystems/iris-community:2019.4.0.379.0
+ARG IMAGE=intersystemsdc/iris-community:2020.4.0.524.0-zpm
 FROM $IMAGE
 
 USER root
@@ -20,7 +21,6 @@ RUN mkdir -p /tmp/deps \
 
 COPY  Installer.cls .
 COPY  src src
-COPY  gbl src/gbl
 COPY irissession.sh /
 
 # running IRIS and open IRIS termninal in USER namespace
