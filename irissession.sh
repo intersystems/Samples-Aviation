@@ -12,6 +12,10 @@ Do ##class(Security.Users).UnExpireUserPasswords("*")
 Set app = \$System.CSP.GetDefaultApp("IRISAPP") _ "/"
 Do EnableIKnow^%SYS.cspServer(app)
 Do EnableDeepSee^%SYS.cspServer(app) 
+zn "IRISAPP"
+zpm 
+load "/opt/irisapp"
+q
 halt
 EOF
 

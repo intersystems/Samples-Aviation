@@ -20,7 +20,7 @@ RUN mkdir -p /tmp/deps \
 
 
 COPY  Installer.cls .
-COPY  src src
+COPY  . .
 COPY irissession.sh /
 
 # running IRIS and open IRIS termninal in USER namespace
@@ -32,7 +32,7 @@ RUN \
   do $SYSTEM.OBJ.Load("Installer.cls", "ck") \
   set sc = ##class(App.Installer).setup() \
   Do $system.OBJ.Load("/tmp/deps/zpm.xml", "ck") \
-  zn "IRISAPP" 
+  zn "IRISAPP"
   
 
 # bringing the standard shell back
