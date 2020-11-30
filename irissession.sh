@@ -9,6 +9,9 @@ if '\$Get(sc) do ##class(%SYSTEM.Process).Terminate(, 1)
 zn "%SYS"
 do ##class(SYS.Container).QuiesceForBundling()
 Do ##class(Security.Users).UnExpireUserPasswords("*")
+Set app = \$System.CSP.GetDefaultApp("IRISAPP") _ "/"
+Do EnableIKnow^%SYS.cspServer(app)
+Do EnableDeepSee^%SYS.cspServer(app) 
 halt
 EOF
 
