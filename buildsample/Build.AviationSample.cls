@@ -74,15 +74,15 @@ ClassMethod run(stagingroot As %String = "", interactive As %Boolean = 0)
     if interactive {
         write !, "Loading data..."
     }
-    set file=stagingroot_"/src/gbl/aviation-data.xml" ;works on both Windows and Unix
-    if '##class(%File).Exists(file) {
+    set dir=stagingroot_"/src/gbl/" ;works on both Windows and Unix
+    if '##class(%File).DirectoryExists(dir) {
         if interactive {
-            write !!, "Looking for "_file
+            write !!, "Looking for "_dir
             write !, "but it does not exist... Quitting."
         }
         return 0
     }
-    do $system.OBJ.Load(file)
+    do $system.OBJ.LoadDir(dir)
  
     // execute the setup code in the loaded classes *********************
     if '##class(%Dictionary.CompiledClass).%ExistsId("Aviation.Utils") {
