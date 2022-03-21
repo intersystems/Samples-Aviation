@@ -4,6 +4,7 @@
     <Module>
       <Name>samples-aviation</Name>
       <Version>1.0.2</Version>
+      <Description>Provides sample data for use in exploring InterSystems IRIS Text Analytics capabilities. Also includes sample analytics model elements.</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="Aviation.PKG"/>
