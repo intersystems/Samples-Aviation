@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2021.2.0DS (Build 210U)" ts="2021-09-01 14:55:55">
+<Global>
+<Node><Sub>^Aviation.Countries</Sub>
+<Node><Sub>AA</Sub>
+<Data>Aruba</Data>
+</Node>
+<Node><Sub>AC</Sub>
+<Data>Antigua And Barbuda</Data>
+</Node>
+<Node><Sub>AF</Sub>
+<Data>Afghanistan</Data>
+</Node>
+<Node><Sub>AG</Sub>
+<Data>Algeria</Data>
+</Node>
+<Node><Sub>AJ</Sub>
+<Data>Azerbaijan</Data>
+</Node>
+<Node><Sub>AL</Sub>
+<Data>Albania</Data>
+</Node>
+<Node><Sub>AM</Sub>
+<Data>Armenia</Data>
+</Node>
+<Node><Sub>AN</Sub>
+<Data>Andorra</Data>
+</Node>
+<Node><Sub>AO</Sub>
+<Data>Angola</Data>
+</Node>
+<Node><Sub>AQ</Sub>
+<Data>American Samoa</Data>
+</Node>
+<Node><Sub>AR</Sub>
+<Data>Argentina</Data>
+</Node>
+<Node><Sub>AS</Sub>
+<Data>Australia</Data>
+</Node>
+<Node><Sub>AT</Sub>
+<Data>Ashmore And Cartier Islands</Data>
+</Node>
+<Node><Sub>AU</Sub>
+<Data>Austria</Data>
+</Node>
+<Node><Sub>AV</Sub>
+<Data>Anguilla</Data>
+</Node>
+<Node><Sub>AY</Sub>
+<Data>Antarctica</Data>
+</Node>
+<Node><Sub>BA</Sub>
+<Data>Bahrain</Data>
+</Node>
+<Node><Sub>BB</Sub>
+<Data>Barbados</Data>
+</Node>
+<Node><Sub>BC</Sub>
+<Data>Botswana</Data>
+</Node>
+<Node><Sub>BD</Sub>
+<Data>Bermuda</Data>
+</Node>
+<Node><Sub>BE</Sub>
+<Data>Belgium</Data>
+</Node>
+<Node><Sub>BF</Sub>
+<Data>Bahamas</Data>
+</Node>
+<Node><Sub>BG</Sub>
+<Data>Bangladesh</Data>
+</Node>
+<Node><Sub>BH</Sub>
+<Data>Belize</Data>
+</Node>
+<Node><Sub>BK</Sub>
+<Data>Bosnia And Herzegovina</Data>
+</Node>
+<Node><Sub>BL</Sub>
+<Data>Bolivia</Data>
+</Node>
+<Node><Sub>BM</Sub>
+<Data>Burma</Data>
+</Node>
+<Node><Sub>BN</Sub>
+<Data>Benin</Data>
+</Node>
+<Node><Sub>BO</Sub>
+<Data>Belarus</Data>
+</Node>
+<Node><Sub>BP</Sub>
+<Data>Solomon Islands</Data>
+</Node>
+<Node><Sub>BR</Sub>
+<Data>Brazil</Data>
+</Node>
+<Node><Sub>BS</Sub>
+<Data>Bassas Da India</Data>
+</Node>
+<Node><Sub>BT</Sub>
+<Data>Bhutan</Data>
+</Node>
+<Node><Sub>BU</Sub>
+<Data>Bulgaria</Data>
+</Node>
+<Node><Sub>BV</Sub>
+<Data>Bouvet Island</Data>
+</Node>
+<Node><Sub>BX</Sub>
+<Data>Brunei</Data>
+</Node>
+<Node><Sub>BY</Sub>
+<Data>Burundi</Data>
+</Node>
+<Node><Sub>CA</Sub>
+<Data>Canada</Data>
+</Node>
+<Node><Sub>CB</Sub>
+<Data>Cambodia</Data>
+</Node>
+<Node><Sub>CD</Sub>
+<Data>Chad</Data>
+</Node>
+<Node><Sub>CE</Sub>
+<Data>Sri Lanka</Data>
+</Node>
+<Node><Sub>CF</Sub>
+<Data>Congo</Data>
+</Node>
+<Node><Sub>CG</Sub>
+<Data>Zaire</Data>
+</Node>
+<Node><Sub>CH</Sub>
+<Data>China</Data>
+</Node>
+<Node><Sub>CI</Sub>
+<Data>Chile</Data>
+</Node>
+<Node><Sub>CJ</Sub>
+<Data>Cayman Islands</Data>
+</Node>
+<Node><Sub>CK</Sub>
+<Data>Cocos (keeling) Islands</Data>
+</Node>
+<Node><Sub>CM</Sub>
+<Data>Cameroon</Data>
+</Node>
+<Node><Sub>CN</Sub>
+<Data>Comoros</Data>
+</Node>
+<Node><Sub>CO</Sub>
+<Data>Colombia</Data>
+</Node>
+<Node><Sub>CQ</Sub>
+<Data>Northern Mariana Islands</Data>
+</Node>
+<Node><Sub>CR</Sub>
+<Data>Coral Sea Islands</Data>
+</Node>
+<Node><Sub>CS</Sub>
+<Data>Costa Rica</Data>
+</Node>
+<Node><Sub>CT</Sub>
+<Data>Central African Republic</Data>
+</Node>
+<Node><Sub>CU</Sub>
+<Data>Cuba</Data>
+</Node>
+<Node><Sub>CV</Sub>
+<Data>Cape Verde</Data>
+</Node>
+<Node><Sub>CW</Sub>
+<Data>Cook Islands</Data>
+</Node>
+<Node><Sub>CY</Sub>
+<Data>Cyprus</Data>
+</Node>
+<Node><Sub>DA</Sub>
+<Data>Denmark</Data>
+</Node>
+<Node><Sub>DJ</Sub>
+<Data>Djibouti</Data>
+</Node>
+<Node><Sub>DO</Sub>
+<Data>Dominica</Data>
+</Node>
+<Node><Sub>DR</Sub>
+<Data>Dominican Republic</Data>
+</Node>
+<Node><Sub>EC</Sub>
+<Data>Ecuador</Data>
+</Node>
+<Node><Sub>EG</Sub>
+<Data>Egypt</Data>
+</Node>
+<Node><Sub>EI</Sub>
+<Data>Ireland</Data>
+</Node>
+<Node><Sub>EK</Sub>
+<Data>Equatorial Guinea</Data>
+</Node>
+<Node><Sub>EN</Sub>
+<Data>Estonia</Data>
+</Node>
+<Node><Sub>ER</Sub>
+<Data>Eritrea</Data>
+</Node>
+<Node><Sub>ES</Sub>
+<Data>El Salvador</Data>
+</Node>
+<Node><Sub>ET</Sub>
+<Data>Ethiopia</Data>
+</Node>
+<Node><Sub>EU</Sub>
+<Data>Europa Island</Data>
+</Node>
+<Node><Sub>EZ</Sub>
+<Data>Czech Republic</Data>
+</Node>
+<Node><Sub>FG</Sub>
+<Data>French Guiana</Data>
+</Node>
+<Node><Sub>FI</Sub>
+<Data>Finland</Data>
+</Node>
+<Node><Sub>FJ</Sub>
+<Data>Fiji</Data>
+</Node>
+<Node><Sub>FK</Sub>
+<Data>Falkland Islands (islas Mal)  as)</Data>
+</Node>
+<Node><Sub>FM</Sub>
+<Data>Federated States Of Micronesia</Data>
+</Node>
+<Node><Sub>FO</Sub>
+<Data>Faroe Islands</Data>
+</Node>
+<Node><Sub>FP</Sub>
+<Data>French Polynesia</Data>
+</Node>
+<Node><Sub>FQ</Sub>
+<Data>Baker Island</Data>
+</Node>
+<Node><Sub>FR</Sub>
+<Data>France</Data>
+</Node>
+<Node><Sub>FS</Sub>
+<Data>French Southern And Antarctic Lands</Data>
+</Node>
+<Node><Sub>FT</Sub>
+<Data>Fr Terr Of Afars Issas</Data>
+</Node>
+<Node><Sub>GA</Sub>
+<Data>Gambia</Data>
+</Node>
+<Node><Sub>GB</Sub>
+<Data>Gabon</Data>
+</Node>
+<Node><Sub>GE</Sub>
+<Data>Germany</Data>
+</Node>
+<Node><Sub>GG</Sub>
+<Data>Georgia</Data>
+</Node>
+<Node><Sub>GH</Sub>
+<Data>Ghana</Data>
+</Node>
+<Node><Sub>GI</Sub>
+<Data>Gibraltar</Data>
+</Node>
+<Node><Sub>GJ</Sub>
+<Data>Grenada</Data>
+</Node>
+<Node><Sub>GK</Sub>
+<Data>Guernsey</Data>
+</Node>
+<Node><Sub>GL</Sub>
+<Data>Greenland</Data>
+</Node>
+<Node><Sub>GO</Sub>
+<Data>Glorioso Islands</Data>
+</Node>
+<Node><Sub>GP</Sub>
+<Data>Guadeloupe</Data>
+</Node>
+<Node><Sub>GR</Sub>
+<Data>Greece</Data>
+</Node>
+<Node><Sub>GT</Sub>
+<Data>Guatemala</Data>
+</Node>
+<Node><Sub>GV</Sub>
+<Data>Guinea</Data>
+</Node>
+<Node><Sub>GY</Sub>
+<Data>Guyana</Data>
+</Node>
+<Node><Sub>GZ</Sub>
+<Data>Gaza Strip</Data>
+</Node>
+<Node><Sub>HA</Sub>
+<Data>Haiti</Data>
+</Node>
+<Node><Sub>HK</Sub>
+<Data>Hong Kong</Data>
+</Node>
+<Node><Sub>HM</Sub>
+<Data>Heard Island And Mcdonald Islands</Data>
+</Node>
+<Node><Sub>HO</Sub>
+<Data>Honduras</Data>
+</Node>
+<Node><Sub>HR</Sub>
+<Data>Croatia</Data>
+</Node>
+<Node><Sub>HU</Sub>
+<Data>Hungary</Data>
+</Node>
+<Node><Sub>IC</Sub>
+<Data>Iceland</Data>
+</Node>
+<Node><Sub>ID</Sub>
+<Data>Indonesia</Data>
+</Node>
+<Node><Sub>IM</Sub>
+<Data>Isle of Man</Data>
+</Node>
+<Node><Sub>IN</Sub>
+<Data>India</Data>
+</Node>
+<Node><Sub>IO</Sub>
+<Data>British Indian Ocean Territory</Data>
+</Node>
+<Node><Sub>IP</Sub>
+<Data>Clipperton Island</Data>
+</Node>
+<Node><Sub>IR</Sub>
+<Data>Iran</Data>
+</Node>
+<Node><Sub>IS</Sub>
+<Data>Israel</Data>
+</Node>
+<Node><Sub>IT</Sub>
+<Data>Italy</Data>
+</Node>
+<Node><Sub>IV</Sub>
+<Data>Cote D&apos;ivoire</Data>
+</Node>
+<Node><Sub>IY</Sub>
+<Data>Ivory Coast</Data>
+</Node>
+<Node><Sub>IZ</Sub>
+<Data>Iraq</Data>
+</Node>
+<Node><Sub>JA</Sub>
+<Data>Japan</Data>
+</Node>
+<Node><Sub>JE</Sub>
+<Data>Jersey</Data>
+</Node>
+<Node><Sub>JM</Sub>
+<Data>Jamaica</Data>
+</Node>
+<Node><Sub>JN</Sub>
+<Data>Jan Mayen</Data>
+</Node>
+<Node><Sub>JO</Sub>
+<Data>Jordan</Data>
+</Node>
+<Node><Sub>JU</Sub>
+<Data>Juan De Nova Island</Data>
+</Node>
+<Node><Sub>KE</Sub>
+<Data>Kenya</Data>
+</Node>
+<Node><Sub>KG</Sub>
+<Data>Kyrgyzstan</Data>
+</Node>
+<Node><Sub>KN</Sub>
+<Data>Korea, Democratic People&apos;s Republic Of</Data>
+</Node>
+<Node><Sub>KQ</Sub>
+<Data>Kingman Reef</Data>
+</Node>
+<Node><Sub>KR</Sub>
+<Data>Kiribati</Data>
+</Node>
+<Node><Sub>KS</Sub>
+<Data>Korea, Republic Of</Data>
+</Node>
+<Node><Sub>KT</Sub>
+<Data>Christmas Island</Data>
+</Node>
+<Node><Sub>KU</Sub>
+<Data>Kuwait</Data>
+</Node>
+<Node><Sub>KZ</Sub>
+<Data>Kazakhstan</Data>
+</Node>
+<Node><Sub>LA</Sub>
+<Data>Laos</Data>
+</Node>
+<Node><Sub>LE</Sub>
+<Data>Lebanon</Data>
+</Node>
+<Node><Sub>LG</Sub>
+<Data>Latvia</Data>
+</Node>
+<Node><Sub>LH</Sub>
+<Data>Lithuania</Data>
+</Node>
+<Node><Sub>LI</Sub>
+<Data>Liberia</Data>
+</Node>
+<Node><Sub>LO</Sub>
+<Data>Slovakia</Data>
+</Node>
+<Node><Sub>LS</Sub>
+<Data>Liechtenstein</Data>
+</Node>
+<Node><Sub>LT</Sub>
+<Data>Lesotho</Data>
+</Node>
+<Node><Sub>LU</Sub>
+<Data>Luxembourg</Data>
+</Node>
+<Node><Sub>LY</Sub>
+<Data>Libya</Data>
+</Node>
+<Node><Sub>MA</Sub>
+<Data>Madagascar</Data>
+</Node>
+<Node><Sub>MB</Sub>
+<Data>Martinique</Data>
+</Node>
+<Node><Sub>MC</Sub>
+<Data>Macau</Data>
+</Node>
+<Node><Sub>MD</Sub>
+<Data>Moldova</Data>
+</Node>
+<Node><Sub>MF</Sub>
+<Data>Mayotte</Data>
+</Node>
+<Node><Sub>MG</Sub>
+<Data>Mongolia</Data>
+</Node>
+<Node><Sub>MH</Sub>
+<Data>Montserrat</Data>
+</Node>
+<Node><Sub>MI</Sub>
+<Data>Malawi</Data>
+</Node>
+<Node><Sub>MK</Sub>
+<Data>Macedonia</Data>
+</Node>
+<Node><Sub>ML</Sub>
+<Data>Mali</Data>
+</Node>
+<Node><Sub>MN</Sub>
+<Data>Monaco</Data>
+</Node>
+<Node><Sub>MO</Sub>
+<Data>Morocco</Data>
+</Node>
+<Node><Sub>MP</Sub>
+<Data>Mauritius</Data>
+</Node>
+<Node><Sub>MR</Sub>
+<Data>Mauritania</Data>
+</Node>
+<Node><Sub>MS</Sub>
+<Data>Marshall Islands</Data>
+</Node>
+<Node><Sub>MT</Sub>
+<Data>Malta</Data>
+</Node>
+<Node><Sub>MU</Sub>
+<Data>Oman</Data>
+</Node>
+<Node><Sub>MV</Sub>
+<Data>Maldives</Data>
+</Node>
+<Node><Sub>MW</Sub>
+<Data>Montenegro</Data>
+</Node>
+<Node><Sub>MX</Sub>
+<Data>Mexico</Data>
+</Node>
+<Node><Sub>MY</Sub>
+<Data>Malaysia</Data>
+</Node>
+<Node><Sub>MZ</Sub>
+<Data>Mozambique</Data>
+</Node>
+<Node><Sub>NC</Sub>
+<Data>New Caledonia</Data>
+</Node>
+<Node><Sub>NE</Sub>
+<Data>Niue</Data>
+</Node>
+<Node><Sub>NF</Sub>
+<Data>Norfolk Island</Data>
+</Node>
+<Node><Sub>NG</Sub>
+<Data>Niger</Data>
+</Node>
+<Node><Sub>NH</Sub>
+<Data>Vanuatu</Data>
+</Node>
+<Node><Sub>NI</Sub>
+<Data>Nigeria</Data>
+</Node>
+<Node><Sub>NL</Sub>
+<Data>Netherlands</Data>
+</Node>
+<Node><Sub>NO</Sub>
+<Data>Norway</Data>
+</Node>
+<Node><Sub>NP</Sub>
+<Data>Nepal</Data>
+</Node>
+<Node><Sub>NR</Sub>
+<Data>Nauru</Data>
+</Node>
+<Node><Sub>NS</Sub>
+<Data>Suriname</Data>
+</Node>
+<Node><Sub>NT</Sub>
+<Data>Netherlands Antilles</Data>
+</Node>
+<Node><Sub>NU</Sub>
+<Data>Nicaragua</Data>
+</Node>
+<Node><Sub>NZ</Sub>
+<Data>New Zealand</Data>
+</Node>
+<Node><Sub>PA</Sub>
+<Data>Paraguay</Data>
+</Node>
+<Node><Sub>PC</Sub>
+<Data>Pitcairn Islands</Data>
+</Node>
+<Node><Sub>PE</Sub>
+<Data>Peru</Data>
+</Node>
+<Node><Sub>PF</Sub>
+<Data>Paracel Islands</Data>
+</Node>
+<Node><Sub>PG</Sub>
+<Data>Spratly Islands</Data>
+</Node>
+<Node><Sub>PK</Sub>
+<Data>Pakistan</Data>
+</Node>
+<Node><Sub>PL</Sub>
+<Data>Poland</Data>
+</Node>
+<Node><Sub>PM</Sub>
+<Data>Panama</Data>
+</Node>
+<Node><Sub>PO</Sub>
+<Data>Portugal</Data>
+</Node>
+<Node><Sub>PP</Sub>
+<Data>Papua New Guinea</Data>
+</Node>
+<Node><Sub>PS</Sub>
+<Data>Trust Terr Of Pacific Islands</Data>
+</Node>
+<Node><Sub>PU</Sub>
+<Data>Guinea-bissau</Data>
+</Node>
+<Node><Sub>QA</Sub>
+<Data>Qatar</Data>
+</Node>
+<Node><Sub>RE</Sub>
+<Data>Reunion</Data>
+</Node>
+<Node><Sub>RO</Sub>
+<Data>Romania</Data>
+</Node>
+<Node><Sub>RP</Sub>
+<Data>Philippines</Data>
+</Node>
+<Node><Sub>RS</Sub>
+<Data>Russia</Data>
+</Node>
+<Node><Sub>RW</Sub>
+<Data>Rwanda</Data>
+</Node>
+<Node><Sub>SA</Sub>
+<Data>Saudi Arabia</Data>
+</Node>
+<Node><Sub>SB</Sub>
+<Data>St Pierre And Miquelon</Data>
+</Node>
+<Node><Sub>SC</Sub>
+<Data>St Kitts And Nevis</Data>
+</Node>
+<Node><Sub>SE</Sub>
+<Data>Seychelles</Data>
+</Node>
+<Node><Sub>SF</Sub>
+<Data>South Africa</Data>
+</Node>
+<Node><Sub>SG</Sub>
+<Data>Senegal</Data>
+</Node>
+<Node><Sub>SH</Sub>
+<Data>St Helena</Data>
+</Node>
+<Node><Sub>SI</Sub>
+<Data>Slovenia</Data>
+</Node>
+<Node><Sub>SL</Sub>
+<Data>Sierra Leone</Data>
+</Node>
+<Node><Sub>SM</Sub>
+<Data>San Marino</Data>
+</Node>
+<Node><Sub>SN</Sub>
+<Data>Singapore</Data>
+</Node>
+<Node><Sub>SO</Sub>
+<Data>Somalia</Data>
+</Node>
+<Node><Sub>SP</Sub>
+<Data>Spain</Data>
+</Node>
+<Node><Sub>SR</Sub>
+<Data>Serbia</Data>
+</Node>
+<Node><Sub>ST</Sub>
+<Data>St Lucia</Data>
+</Node>
+<Node><Sub>SU</Sub>
+<Data>Sudan</Data>
+</Node>
+<Node><Sub>SV</Sub>
+<Data>Svalbard</Data>
+</Node>
+<Node><Sub>SW</Sub>
+<Data>Sweden</Data>
+</Node>
+<Node><Sub>SX</Sub>
+<Data>South Georgia &amp; S Sandwich Isl</Data>
+</Node>
+<Node><Sub>SY</Sub>
+<Data>Syria</Data>
+</Node>
+<Node><Sub>SZ</Sub>
+<Data>Switzerland</Data>
+</Node>
+<Node><Sub>TC</Sub>
+<Data>United Arab Emirates</Data>
+</Node>
+<Node><Sub>TD</Sub>
+<Data>Trinidad And Tobago</Data>
+</Node>
+<Node><Sub>TE</Sub>
+<Data>Tromelin Island</Data>
+</Node>
+<Node><Sub>TH</Sub>
+<Data>Thailand</Data>
+</Node>
+<Node><Sub>TI</Sub>
+<Data>Tajikistan</Data>
+</Node>
+<Node><Sub>TK</Sub>
+<Data>Turks And Caicos Islands</Data>
+</Node>
+<Node><Sub>TL</Sub>
+<Data>Tokelau</Data>
+</Node>
+<Node><Sub>TN</Sub>
+<Data>Tonga</Data>
+</Node>
+<Node><Sub>TO</Sub>
+<Data>Togo</Data>
+</Node>
+<Node><Sub>TP</Sub>
+<Data>Sao Tome And Principe</Data>
+</Node>
+<Node><Sub>TS</Sub>
+<Data>Tunisia</Data>
+</Node>
+<Node><Sub>TU</Sub>
+<Data>Turkey</Data>
+</Node>
+<Node><Sub>TV</Sub>
+<Data>Tuvalu</Data>
+</Node>
+<Node><Sub>TW</Sub>
+<Data>Taiwan</Data>
+</Node>
+<Node><Sub>TX</Sub>
+<Data>Turkmenistan</Data>
+</Node>
+<Node><Sub>TZ</Sub>
+<Data>Tanzania</Data>
+</Node>
+<Node><Sub>UG</Sub>
+<Data>Uganda</Data>
+</Node>
+<Node><Sub>UK</Sub>
+<Data>United Kingdom</Data>
+</Node>
+<Node><Sub>UN</Sub>
+<Data>Unknown</Data>
+</Node>
+<Node><Sub>UP</Sub>
+<Data>Ukraine</Data>
+</Node>
+<Node><Sub>USA</Sub>
+<Data>United States</Data>
+</Node>
+<Node><Sub>UV</Sub>
+<Data>Burkina</Data>
+</Node>
+<Node><Sub>UY</Sub>
+<Data>Uruguay</Data>
+</Node>
+<Node><Sub>UZ</Sub>
+<Data>Uzbekistan</Data>
+</Node>
+<Node><Sub>VC</Sub>
+<Data>St Vincent And The Grenadines</Data>
+</Node>
+<Node><Sub>VE</Sub>
+<Data>Venezuela</Data>
+</Node>
+<Node><Sub>VI</Sub>
+<Data>British Virgin Islands</Data>
+</Node>
+<Node><Sub>VM</Sub>
+<Data>Vietnam</Data>
+</Node>
+<Node><Sub>VT</Sub>
+<Data>Vatican City</Data>
+</Node>
+<Node><Sub>WA</Sub>
+<Data>Namibia</Data>
+</Node>
+<Node><Sub>WE</Sub>
+<Data>West Bank</Data>
+</Node>
+<Node><Sub>WF</Sub>
+<Data>Wallis And Futuna</Data>
+</Node>
+<Node><Sub>WI</Sub>
+<Data>Western Sahara</Data>
+</Node>
+<Node><Sub>WN</Sub>
+<Data>West Indies</Data>
+</Node>
+<Node><Sub>WQ</Sub>
+<Data>Wake Island</Data>
+</Node>
+<Node><Sub>WS</Sub>
+<Data>Western Samoa</Data>
+</Node>
+<Node><Sub>WZ</Sub>
+<Data>Swaziland</Data>
+</Node>
+<Node><Sub>YM</Sub>
+<Data>Yemen</Data>
+</Node>
+<Node><Sub>ZA</Sub>
+<Data>Zambia</Data>
+</Node>
+<Node><Sub>ZI</Sub>
+<Data>Zimbabwe</Data>
+</Node>
+</Node>
+</Global>
+</Export>

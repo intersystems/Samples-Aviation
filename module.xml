@@ -3,12 +3,20 @@
   <Document name="samples-aviation.ZPM">
     <Module>
       <Name>samples-aviation</Name>
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
       <Description>Provides sample data for use in exploring InterSystems IRIS Text Analytics capabilities. Also includes sample analytics model elements.</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="Aviation.PKG"/>
-      <Resource Name="aviation-data.GBL"/>
+      <Resource Name="Aviation.AircraftD.GBL"/>
+      <Resource Name="Aviation.AircraftI.GBL"/>
+      <Resource Name="Aviation.Countries.GBL"/>
+      <Resource Name="Aviation.CrewD.GBL"/>
+      <Resource Name="Aviation.CrewI.GBL"/>
+      <Resource Name="Aviation.EventD.GBL"/>
+      <Resource Name="Aviation.EventI.GBL"/>
+      <Resource Name="Aviation.EventS.GBL"/>
+      <Resource Name="Aviation.States.GBL"/>
       <Invokes>
         <Invoke Class="Aviation.Utils" Method="SetupStandalone"></Invoke>
         <Invoke Class="Aviation.Utils" Method="SetupCube"></Invoke>
