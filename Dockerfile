@@ -21,7 +21,7 @@ RUN mkdir -p /tmp/deps \
 
 COPY  Installer.cls .
 COPY  src src
-COPY  gbl src/gbl
+#  COPY  gbl src/gbl
 COPY irissession.sh /
 
 # running IRIS and open IRIS termninal in USER namespace
