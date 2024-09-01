@@ -1,15 +1,15 @@
 version: '3.6'
 services:
   iris:
-    build: 
+    build:
       context: .
       dockerfile: ${DOCKERFILE:-Dockerfile}
     restart: always
     command: --ISCAgent false
-    ports: 
+    ports:
       - 41773:1972
       - 42773:52773
       - 53773
     volumes:
-      - ./:/irisdev/app
+      - ./:/home/irisowner/dev
       - ./src/csp:/usr/irissys/mgr/csp/irisapp
