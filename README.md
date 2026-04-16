@@ -12,7 +12,7 @@ After setup, the data is available for use in various ways:
 * For use in [InterSystems IRIS Natural Language Processing](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW).
   The repo also contains specific samples related to NLP.
 * For use with [InterSystems IRIS SQL Search](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSQLSRCH).
-* For use with [Text Analytics options in InterSystems IRIS Business Intelligence](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=D2MODADV_ch_iknow).
+* For use with [Text Analytics options in InterSystems IRIS Business Intelligence](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW_text_analytics).
 
 > :warning: Please note the InterSystems IRIS NLP capability (formerly known as iKnow) is [deprecated](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW_intro).
   
