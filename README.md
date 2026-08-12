@@ -9,9 +9,9 @@ Samples-Aviation provides sample data for use in exploring InterSystems IRIS Tex
 In order to use this sample, you must have an InterSystems IRIS license that includes these capabilities.
 
 After setup, the data is available for use in various ways:
-* For use in [InterSystems IRIS Natural Language Processing](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW).
+* For use in [InterSystems IRIS Natural Language Processing](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW).
   The repo also contains specific samples related to NLP.
-* For use with [InterSystems IRIS SQL Search](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSQLSRCH).
+* For use with [InterSystems IRIS SQL Search](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSQLSRCH).
 * For use with [Text Analytics options in InterSystems IRIS Business Intelligence](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW_text_analytics).
 
 > :warning: Please note the InterSystems IRIS NLP capability (formerly known as iKnow) is [deprecated](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW_intro).
@@ -40,14 +40,14 @@ The repo also contains specific samples related to these options.
 > :warning: Please note the InterSystems IRIS NLP capability (formerly known as iKnow) is [deprecated](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW_intro).
 
 The `Aviation.ReportDomain` class defines a sample NLP domain based on the data
-from this repo. You can run NLP queries against this domain. See [Using InterSystems IRIS Natural Language Processing](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW).
+from this repo. You can run NLP queries against this domain. See [Using InterSystems IRIS Natural Language Processing](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW).
 
 The InterSystems IRIS Natural Language Processing technology is also available for standalone use. [Click here](https://github.com/intersystems/iknow) to learn more.
 
 ### Samples using InterSystems IRIS Business Intelligence (BI)
 
 * The `Aviation.Cubes` package contains BI cube definitions that use Text Analytics features
-  and that use the data in this repo. See [Using Text Analytics in Cubes](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page?KEY=D2MODADV_ch_iknow) for details.
+  and that use the data in this repo. See [Using Text Analytics in Cubes](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=D2MODADV_ch_txtanly) for details.
 * `Aviation.KPI.TopConcepts` contains a BI KPI that uses a Text Analytics query.
 * `Aviation.KPI.Actions` defines a KPI action (which is used on a dashboard also in this sample).
 * `Aviation.DashboardsEtc` defines Business Intelligence pivot tables and dashboards
@@ -84,7 +84,7 @@ zpm:USER> install samples-aviation
      wget -qO- https://github.com/intersystems/Samples-Aviation/archive/master.tar.gz | tar xvz -C samples  
      ```
 
-2. In the InterSystems IRIS Management Portal, create a namespace called SAMPLES. You will load the sample data into this namespace. If you need help creating the namespace, see [Creating a Namespace and Database to Hold Samples](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=ASAMPLES_createns). 
+2. In the InterSystems IRIS Management Portal, create a namespace called SAMPLES. You will load the sample data into this namespace. If you need help creating the namespace, see [Creating a Namespace and Database to Hold Samples](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=ASAMPLES_createns). 
 3. To enable the SAMPLES web application for use with InterSystems IRIS Analytics:
     a.  In the Management Portal, click System Administration > Security > Applications > Web Applications.
     b.  Click the `/csp/samples` link in the leftmost column. This assumes that the namespace you created is called SAMPLES.
