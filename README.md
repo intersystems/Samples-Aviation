@@ -47,7 +47,7 @@ The InterSystems IRIS Natural Language Processing technology is also available f
 ### Samples using InterSystems IRIS Business Intelligence (BI)
 
 * The `Aviation.Cubes` package contains BI cube definitions that use Text Analytics features
-  and that use the data in this repo. See [Using Text Analytics in Cubes](http://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page?KEY=D2MODADV_ch_iknow) for details.
+  and that use the data in this repo. See [Using Text Analytics in Cubes](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GIKNOW_text_analytics) for details.
 * `Aviation.KPI.TopConcepts` contains a BI KPI that uses a Text Analytics query.
 * `Aviation.KPI.Actions` defines a KPI action (which is used on a dashboard also in this sample).
 * `Aviation.DashboardsEtc` defines Business Intelligence pivot tables and dashboards
